@@ -84,7 +84,6 @@ code {
 
 .enlarge-image:hover img {
   transform: scale(1.1);
-  /* Adjust the scale value as needed */
 }
 
 
@@ -134,4 +133,23 @@ code {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+
+.navbtn {
+  background-color: rgb(192, 247, 96);
+  font-weight: 600;
+  font-size: small;
+  color: black;
+
+}
+
+.navbtn:hover {
+  background-color: rgb(158, 193, 75);
+  color: black;
+
+}
+
+.navbtn:active{
+  transform: scale(1.1);
 }

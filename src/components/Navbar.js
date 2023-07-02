@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 const Navbar = () => {
   return (
     <>
       <nav class="navbar fixed-top navbar-expand-lg anim" id="navbar">
-      <a class="navbar-brand" href="">
+      <a class="navbar-brand" href="/">
         <div class="enlarge-image">
           <img class="h-20" src="job.png" alt="logo" />
         </div>
@@ -26,7 +28,7 @@ const Navbar = () => {
             <a
               class="nav-link text-light font-weight-bolder"
               onclick="myFunction(this)"
-              href=""
+              href="/"
               >Home</a
             >
           </li>
@@ -61,6 +63,10 @@ const Navbar = () => {
               href="#contact"
               >Contact Us</a
             >
+          </li>
+          <li>
+            <Link to="/login"><button className='btn btn-primary navbtn mx-2'>Login</button></Link>
+            <Link to="/register"><button className='btn btn-primary navbtn'>Register</button></Link>
           </li>
         </ul>
       </div>
