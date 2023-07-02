@@ -153,3 +153,38 @@ code {
 .navbtn:active{
   transform: scale(1.1);
 }
+.sp{
+  color: #dd4b4f;
+}
+#loginDiv {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+#loginDiv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(https://img.freepik.com/free-vector/recruitment-agency-searching-job-applicants_1262-19873.jpg?w=1380&t=st=1688273587~exp=1688274187~hmac=d4468ba83efb59a2e96e946899f4acccc76fb29d7f76c3217cea7c2779bdb781);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+#containerLogin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#fnln{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
