@@ -156,13 +156,13 @@ code {
 .sp{
   color: #dd4b4f;
 }
-#loginDiv {
+#registerDiv {
   position: relative;
   height: 100vh;
   width: 100vw;
 }
 
-#loginDiv::before {
+#registerDiv::before {
   content: "";
   position: absolute;
   top: 0;
@@ -177,7 +177,7 @@ code {
   z-index: -1;
 }
 
-#containerLogin{
+#containerRegister{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -185,13 +185,269 @@ code {
 }
 #fnln{
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
+
 #cardDiv{
   max-width: 440px;
   max-height: 540px;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 5px 5px 5px rgba(245, 83, 83, 0.247);
+}
+
+.registerbtn{
+  background-color: rgb(247, 96, 96);
+  font-weight: 600;
+  font-size: small;
+  color: black;
+}
+.registerbtn:hover{
+  background-color: rgb(187, 76, 76);
+  font-weight: 600;
+  font-size: small;
+  color: black;
+}
+.registerbtn:active{
+  transform: scale(1.1);
+}
+input::placeholder {
+  font-size: smaller;
+  font-family:Arial, Helvetica, sans-serif ;
+}
+
+
+#loginDiv {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+#loginDiv::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(https://img.freepik.com/free-vector/gray-abstract-wireframe-background_53876-99911.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+  z-index: -1;
+}
+#containerlogin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+#cardDivL{
+  max-width: 440px;
+  max-height: 540px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(245, 83, 83, 0.247);
+}
+
+.registerbtnL{
+  background-color: rgb(247, 96, 96);
+  font-weight: 600;
+  font-size: small;
+  color: black;
+}
+.registerbtnL:hover{
+  background-color: rgb(187, 76, 76);
+  font-weight: 600;
+  font-size: small;
+  color: black;
+}
+.registerbtnL:active{
+  transform: scale(1.1);
+}
+input::placeholder {
+  font-size: smaller;
+  font-family:Arial, Helvetica, sans-serif ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.contact-form {
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-form form {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.contact-form .form-group {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.contact-form label {
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: rgb(247, 76, 76);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(247, 76, 76);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.contact-form button:hover {
+  background-color: rgb(247, 96, 96);
+}
+
+.contact-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.contact-form .success-message {
+  color: #4caf50;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-form .error-message {
+  color: #f44336;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#cardDivC{
+  max-width: 440px;
+  max-height: 640px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(245, 83, 83, 0.247);
+  overflow-y:auto;
+}
+
+
+
+
+
+
+
+#map{
+  width: 800px;
+  height: 600px;
+  border-radius: 15px;
+}
+
+.pagination__page {
+  display: inline-block;
+  margin: 0 4px;
+}
+
+.pagination__link {
+  color: #333333;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 8px 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.pagination__link:hover {
+  color: #333333;
+  background-color: #ef6464;
+  border: 1px solid #8a1f1f;
+  padding: 8px 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pagination__link--active {
+  background-color: #f26767;
+  color: #000000;
+}
+
+.pagination{
+ justify-content: center;
+ align-items: center;
+ margin-top: 30px;
+}
+.pagination__button a{
+  background-color: rgb(247, 96, 96);
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px;
+}
+.pagination__button a:hover{
+  background-color: rgb(247, 96, 96);
+  color: black;text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+
+}
+
+.fa{
+  color: rgb(169, 166, 166);
+  font-size: 15px;
 }

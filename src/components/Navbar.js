@@ -33,11 +33,11 @@ const Navbar = () => {
             >
           </li>
           <li class="nav-item">
-            <a
+            <Link
+              to="/jobs"
               class="nav-link text-light font-weight-bolder"
               onclick="myFunction(this)"
-              href="#courses"
-              >Jobs</a
+              >Jobs</Link
             >
           </li>
           <li class="nav-item">
@@ -57,16 +57,16 @@ const Navbar = () => {
             >
           </li>
           <li class="nav-item">
-            <a
+            <Link to="/contact"
               class="nav-link text-light font-weight-bolder"
               onclick="myFunction(this)"
-              href="#contact"
-              >Contact Us</a
+              
+              >Contact Us</Link
             >
           </li>
           <li>
-            <Link to="/login"><button className='btn btn-primary navbtn mx-2'>Login</button></Link>
-            <Link to="/register"><button className='btn btn-primary navbtn'>Register</button></Link>
+            <Link to="/login"><button className='btn  navbtn mx-2'>Login</button></Link>
+            <Link to="/register"><button className='btn  navbtn'>Register</button></Link>
           </li>
         </ul>
       </div>
