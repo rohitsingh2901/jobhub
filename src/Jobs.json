@@ -138,7 +138,7 @@
         "max-experience": 5,
         "postTime": "1 day ago",
         "status": "Job",
-        "image": "Jobs Logo/PQR.png"
+        "image": "Jobs Logo/PQS.png"
       },
       {
         "id": 11,
@@ -152,7 +152,7 @@
         "max-experience": 7,
         "postTime": "2 weeks ago",
         "status": "Job",
-        "image": "Jobs Logo/XYZ.png"
+        "image": "Jobs Logo/XYA.png"
       },
       {
         "id": 12,
@@ -166,7 +166,7 @@
         "max-experience": 10,
         "postTime": "3 weeks ago",
         "status": "Job",
-        "image": "Jobs Logo/ABC.png"
+        "image": "Jobs Logo/ABD.png"
       },
       {
         "id": 13,
@@ -180,7 +180,7 @@
         "max-experience": 4,
         "postTime": "3 days ago",
         "status": "Job",
-        "image": "Jobs Logo/EFG.png"
+        "image": "Jobs Logo/EFGH.png"
       },
       {
         "id": 14,
@@ -194,7 +194,7 @@
         "max-experience": 6,
         "postTime": "1 week ago",
         "status": "Job",
-        "image": "Jobs Logo/LMN.png"
+        "image": "Jobs Logo/LMNO.png"
       },
       {
         "id": 15,
@@ -208,7 +208,7 @@
         "max-experience": 7,
         "postTime": "2 weeks ago",
         "status": "Job",
-        "image": "Jobs Logo/RST.png"
+        "image": "Jobs Logo/RSTU.png"
       },
       {
         "id": 16,
@@ -222,7 +222,7 @@
         "max-experience": 9,
         "postTime": "1 day ago",
         "status": "Job",
-        "image": "Jobs Logo/JKL.png"
+        "image": "Jobs Logo/JKLM.png"
       },
       {
         "id": 17,
@@ -236,7 +236,7 @@
         "max-experience": 4,
         "postTime": "2 days ago",
         "status": "Job",
-        "image": "Jobs Logo/PQR.png"
+        "image": "Jobs Logo/PQRST.png"
       },
       {
         "id": 18,
@@ -250,7 +250,7 @@
         "max-experience": 6,
         "postTime": "3 weeks ago",
         "status": "Job",
-        "image": "Jobs Logo/XYZ.png"
+        "image": "Jobs Logo/XYZB.png"
       },
       {
         "id": 19,
@@ -264,7 +264,7 @@
         "max-experience": 7,
         "postTime": "1 week ago",
         "status": "Job",
-        "image": "Jobs Logo/EFG.png"
+        "image": "Jobs Logo/EFGI.png"
       },
       {
         "id": 20,
@@ -278,7 +278,7 @@
         "max-experience": 10,
         "postTime": "2 days ago",
         "status": "Job",
-        "image": "Jobs Logo/LMN.png"
+        "image": "Jobs Logo/LMNA.png"
       }
     ]
   }

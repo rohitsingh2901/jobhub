@@ -424,6 +424,7 @@ input::placeholder {
 .pagination__link--active {
   background-color: #f26767;
   color: #000000;
+
 }
 
 .pagination{
@@ -450,4 +451,57 @@ input::placeholder {
 .fa{
   color: rgb(169, 166, 166);
   font-size: 15px;
+}
+.pagination__button--disabled a:hover{
+  cursor: not-allowed;
+}
+#timecard{
+  background-color: rgb(234, 234, 234);
+  padding:3px 6px;
+  border-radius: 5px;
+}
+.view1btn{
+  background-color: rgb(247, 96, 96);
+  font-weight: 600;
+  font-size: small;
+  color: black;
+}
+.view1btn:focus{
+  background-color: rgb(247, 96, 96);
+  font-weight: 600;
+  font-size: small;
+  color: black;
+  outline: 3px groove rgb(251, 68, 68);
+}
+.view1btn:active{
+  transform: scale(1.1);
+}
+.view2btn{
+  background-color: rgb(59, 59, 242);
+  font-weight: 600;
+  font-size: small;
+  color: white;
+}
+.view2btn:focus{
+  background-color: rgb(59, 59, 242);
+  font-weight: 600;
+  font-size: small;
+  color: white;
+  outline: 3px groove rgb(37, 37, 224);
+}
+.view2btn:active{
+  transform: scale(1.1);
+}
+
+
+.icontitles{
+  font-size: 13px;
+  color: #474646;
+}
+#mainCard{
+  min-width:  540px;
+  min-height: 300px;
+  border: 2px solid rgb(251, 219, 219);
+  border-radius: 20px;
+  box-shadow: 10px 10px rgba(255, 0, 0, 0.030);
 }

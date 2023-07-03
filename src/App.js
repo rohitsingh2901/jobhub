@@ -4,6 +4,7 @@ import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import Register from "./components/Register";
 import Contact from "./components/Contact";
 import Jobs from "./components/Jobs";
+import SingleJob from "./components/SingleJob";
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
       </Routes>
       <Routes>
           <Route path="/jobs" Component={Jobs}/>
+      </Routes>
+      <Routes>
+          <Route path="/jobs/:id" Component={SingleJob}/>
       </Routes>
       
     </Router>
