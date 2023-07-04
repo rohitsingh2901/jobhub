@@ -57,7 +57,7 @@ const Jobs = () => {
                     <hr></hr>
                     <div className="flex justify-between">
                     <Link to={`/jobs/${element.id}`}><button className="btn btn-sm view1btn">View details</button></Link>
-                    <button className="btn btn-sm view2btn">Apply Now</button>
+                    <button className="btn btn-sm view2btn" data-dismiss="modal" aria-label="Close">Apply Now</button>
                     </div>
                     
                   </div>
