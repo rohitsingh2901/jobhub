@@ -3,12 +3,14 @@ import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
+ 
+
   return (
     <>
       <nav class="navbar fixed-top navbar-expand-lg anim" id="navbar">
       <a class="navbar-brand" href="/">
         <div class="enlarge-image">
-          <img style={{"height":"4vw"}} src="job.png" alt="logo" />
+          <img style={{"height":"4vw"}} src="/job.png" alt="logo" />
         </div>
       </a>
       <button

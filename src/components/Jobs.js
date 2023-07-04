@@ -10,6 +10,7 @@ const Jobs = () => {
 
   const handlePageChange = ({ selected }) => {
     setCurrentPage(selected);
+    window.scrollTo(0, 0);
   };
 
   const renderData = data.jobs.slice(
