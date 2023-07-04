@@ -18,6 +18,9 @@ const SingleJob = () => {
         alert("some error occured");
       });
   };
+  const handleUpload = ()=>{
+    document.getElementsByClassName('file-upload').file_upload();
+  }
 
   return (
     <div className="container mt-32">
@@ -120,117 +123,209 @@ const SingleJob = () => {
           <hr></hr>
 
           <div className="container">
-
-          <div className="mt-5">
-            <h6 className="font-medium">
-              About {data.jobs.at(id - 1).company}
-            </h6>
-            <p className="text-start text-sm">{data.jobs.at(id - 1).aboutCompany}</p>
-          </div>
-          <div className="mt-5">
-            <h6 className="font-medium">About the job</h6>
-            <p className="text-start text-sm">{data.jobs.at(id - 1).aboutJob}</p>
-          </div>
-          <div className="mt-5">
-            <h6 className="font-medium">Skill(s) required</h6>
-            <ul>
-              {data.jobs.at(id - 1).skillsRequired.map((item, index) => (
-                <li className="text-sm" key={index}>
-                  {index + 1}. {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="mt-5">
-            <h6 className="font-medium">Salary</h6>
-            <p className="text-start text-sm">Annual CTC: {data.jobs.at(id - 1)["min-ctc"] +
-                        "-" +
-                        data.jobs.at(id - 1)["max-ctc"] +
-                        " LPA"}</p>
-          </div>
-          <div className="mt-5">
-            <h6 className="font-medium">Perk</h6>
-            <ul>
-              {data.jobs.at(id - 1).perks.map((item, index) => (
-                <li className="text-sm" key={index}>
-                  {index + 1}. {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="mt-5">
-            <h6 className="font-medium">Number of Opening</h6>
-            <p className="text-start text-sm">{data.jobs.at(id - 1).openings}</p>
-          </div>
-          <div className="flex justify-center">
-            <button className="btn btn-sm view2btn" data-toggle="modal" data-target="#exampleModalLong">Apply Now</button>
-          </div>
+            <div className="mt-5">
+              <h6 className="font-medium">
+                About {data.jobs.at(id - 1).company}
+              </h6>
+              <p className="text-start text-sm">
+                {data.jobs.at(id - 1).aboutCompany}
+              </p>
+            </div>
+            <div className="mt-5">
+              <h6 className="font-medium">About the job</h6>
+              <p className="text-start text-sm">
+                {data.jobs.at(id - 1).aboutJob}
+              </p>
+            </div>
+            <div className="mt-5">
+              <h6 className="font-medium">Skill(s) required</h6>
+              <ul>
+                {data.jobs.at(id - 1).skillsRequired.map((item, index) => (
+                  <li className="text-sm" key={index}>
+                    {index + 1}. {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-5">
+              <h6 className="font-medium">Salary</h6>
+              <p className="text-start text-sm">
+                Annual CTC:{" "}
+                {data.jobs.at(id - 1)["min-ctc"] +
+                  "-" +
+                  data.jobs.at(id - 1)["max-ctc"] +
+                  " LPA"}
+              </p>
+            </div>
+            <div className="mt-5">
+              <h6 className="font-medium">Perk</h6>
+              <ul>
+                {data.jobs.at(id - 1).perks.map((item, index) => (
+                  <li className="text-sm" key={index}>
+                    {index + 1}. {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="mt-5">
+              <h6 className="font-medium">Number of Opening</h6>
+              <p className="text-start text-sm">
+                {data.jobs.at(id - 1).openings}
+              </p>
+            </div>
+            <div className="flex justify-center">
+              <button
+                className="btn btn-sm view2btn"
+                data-toggle="modal"
+                data-target="#exampleModalLong"
+              >
+                Apply Now
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-<div class="modal fade bd-example-modal-lg" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div>
-        <h5 class="modal-title" id="exampleModalLongTitle">Applying for {data.jobs.at(id - 1).name}</h5>
-        <small>{data.jobs.at(id - 1).company}</small>
+      <div
+        class="modal fade bd-example-modal-lg"
+        id="exampleModalLong"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg" role="document">
+          <div class="modal-content">
+            <form>
+              <div class="modal-header">
+                <div>
+                  <h5 class="modal-title font-bold" id="exampleModalLongTitle">
+                    Applying for {data.jobs.at(id - 1).name}
+                  </h5>
+                  <small>{data.jobs.at(id - 1).company}</small>
+                </div>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <h5 className="font-medium container mb-3">
+                  Contact Information
+                </h5>
+                <div id="fnln">
+                  <div className="form-group my-2 col-6">
+                    <label className="font-medium" htmlfor="fn">
+                      First Name
+                    </label>
+                    <input
+                      required
+                      type="text"
+                      className="form-control"
+                      id="fn"
+                      placeholder="John"
+                    />
+                  </div>
+                  <div className="form-group my-2 col-6">
+                    <label className="font-medium" htmlfor="ln">
+                      Last Name
+                    </label>
+                    <input
+                      required
+                      type="text"
+                      className="form-control"
+                      id="ln"
+                      placeholder="Doe"
+                    />
+                  </div>
+                </div>
+
+                <div id="fnln">
+                  <div className="form-group my-2 col-6">
+                    <label className="font-medium" htmlfor="email">
+                      Email address
+                    </label>
+                    <input
+                      required
+                      type="email"
+                      className="form-control"
+                      id="email"
+                      aria-describedby="emailHelp"
+                      placeholder="john@example.cpm"
+                    />
+                  </div>
+
+                  <div className="form-group my-2 col-6">
+                    <label className="font-medium" htmlfor="phn">
+                      Phone
+                    </label>
+                    <input
+                      required
+                      type="tel"
+                      className="form-control"
+                      id="phn"
+                      placeholder="0000000000"
+                    />
+                  </div>
+                </div>
+                <div className="form-group mt-5 col-12">
+                  <h5 className="font-medium mb-3">Cover Letter</h5>
+                  <label className="font-medium" htmlfor="exampleInputName1">
+                    Why should you be hired for this role?
+                  </label>
+                  <textarea
+                    required
+                    type="text"
+                    className="form-control"
+                    id="exampleInputName1"
+                    placeholder="Mention in detail what relevant skill or past experience you have for this job. What excites you about this job? Why would you be a good fit?"
+                    rows={4}
+                  />
+                </div>
+
+                <div className="form-group mt-5 col-12">
+                  <h5 className="font-medium mb-3">Upload Resume</h5>
+                  <label className="font-medium" htmlfor="exampleInputName1">
+                    Kindly provide an updated version of your resume for our
+                    records.
+                  </label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" onClick={handleUpload}>Upload</span>
+                    </div>
+                    <div class="custom-file">
+                      <input
+                        type="file"
+                        class="custom-file-input"
+                        id="inputGroupFile01"
+                      />
+                      <label class="custom-file-label" for="inputGroupFile01">
+                        Choose file
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="my-1">
+                  <small className="form-text text-muted"></small>
+                </div>
+                <div></div>
+              </div>
+
+              <div class="modal-footer">
+                <button type="submit" className="btn mt-2 view2btn">
+                  Submit application
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-
-
-
-
-      <form>
-          <div id="fnln">
-          <div className="form-group my-2 col-6">
-            <label className="font-medium" htmlfor="exampleInputName1">First Name</label>
-            <input
-              type="text"
-              className="form-control"
-              id="exampleInputName1"
-              placeholder="John"
-            />
-          </div>
-          <div className="form-group my-2 col-6">
-            <label className="font-medium" htmlfor="exampleInputName1">Last Name</label>
-            <input
-              type="text"
-              className="form-control"
-              id="exampleInputName1"
-              placeholder="Doe"
-            />
-          </div>
-          </div>
-            <div className="my-1">
-          <small className="form-text text-muted">
-            </small>
-            </div>
-            <div>
-          
-            </div>
-        </form>
-
-
-
-
-      </div>
-
-      <div class="modal-footer">
-      <button type="submit" className="btn mt-2 view2btn">
-            Submit application
-          </button>
       </div>
     </div>
-  </div>
-</div>
-    </div>
-    
   );
 };
 
