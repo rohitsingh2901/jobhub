@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Register = () => {
   return (
     <div id="registerDiv">
-      <div className="container pt-40" id="containerRegister">
+      <div className="container pt-32" id="containerRegister">
         <h1 className="font-extrabold">
           Register and apply for <span className="sp">FREE</span>
         </h1>

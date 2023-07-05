@@ -5,10 +5,7 @@ const Contact = () => {
   return (
     <div>
 
-        <div class="container mt-40">
-        <p class="font-light text-center font-semibold text-gray-600">
-          Get in Touch
-        </p>
+        <div class="container mt-8">
         <h1 class="font-extrabold text-center text-6xl">Contact Us</h1>
         <hr class="my-16" />
       </div>

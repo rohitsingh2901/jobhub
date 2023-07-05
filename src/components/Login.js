@@ -5,7 +5,7 @@ const Login = () => {
 
   return (
     <div id="loginDiv">
-      <div className="container pt-40" id="containerlogin">
+      <div className="container pt-32" id="containerlogin">
         <h1 className="font-extrabold">
           Login and apply for <span className="sp">FREE</span>
         </h1>
