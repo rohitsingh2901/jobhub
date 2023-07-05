@@ -505,3 +505,54 @@ input::placeholder {
   border-radius: 20px;
   box-shadow: 10px 10px rgba(255, 0, 0, 0.030);
 }
+
+
+
+
+
+
+
+
+
+form.search input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.search button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: rgb(59, 59, 242);
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.search button:hover {
+  background: rgb(39, 39, 213);
+}
+
+form.search::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.search{
+  margin:auto;
+  max-width:300px;
+  display: flex;
+  justify-content: end
+}
+#search{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 50px;
+
+}

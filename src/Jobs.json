@@ -323,8 +323,8 @@
     },
     {
       "id": 11,
-      "applicants" : 23,
-      "name": "Software Engineer",
+      "applicants": 23,
+      "name": "Front End Development",
       "company": "ABC Technology Services",
       "location": "New Delhi",
       "startDate": "Immediately",
@@ -345,21 +345,21 @@
         "Collaborative team"
       ],
       "skillsRequired": [
-        "Java",
-        "C++",
-        "Object-oriented programming",
-        "Problem-solving",
-        "Software development life cycle"
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Responsive design",
+        "Web development"
       ],
-      "aboutJob": "As a software engineer, you will be responsible for designing, coding, and testing software applications. You should have a strong command of programming languages and be able to work collaboratively with cross-functional teams to deliver high-quality software solutions."
+      "aboutJob": "As a front end developer, you will be responsible for designing and implementing user interfaces for websites and web applications. You should have a strong understanding of HTML, CSS, and JavaScript, and be able to work collaboratively with back end developers and designers to create seamless user experiences."
     },
     {
       "id": 12,
-      "applicants" : 35,
-      "name": "Business Analyst",
-      "company": "XYZ Consulting Group",
+      "applicants": 19,
+      "name": "Back End Development",
+      "company": "XYZ Software Solutions",
       "location": "Bangalore",
-      "startDate": "2 weeks from now",
+      "startDate": "Immediately",
       "min-ctc": 5,
       "max-ctc": 9,
       "min-experience": 3,
@@ -367,279 +367,317 @@
       "postTime": "2 days ago",
       "status": "Job",
       "image": "/Jobs Logo/XYZ.png",
-      "openings": 4,
-      "aboutCompany": "XYZ Consulting Group is a leading management consulting firm specializing in business analysis and strategy. We help businesses optimize their operations, improve efficiency, and drive growth through data-driven insights and strategic recommendations.",
-      "afterProbation": "Upon successful completion of the probation period, employees will receive benefits such as health insurance, paid time off, and opportunities for career advancement.",
-      "perks": [
-        "Flexible work environment",
-        "Training and skill development programs",
-        "Competitive salary package",
-        "Collaborative and inclusive culture"
-      ],
-      "skillsRequired": [
-        "Data analysis",
-        "Business process modeling",
-        "Market research",
-        "Problem-solving",
-        "Communication skills"
-      ],
-      "aboutJob": "As a business analyst, you will be responsible for analyzing business processes, identifying areas for improvement, and providing strategic recommendations. You should have strong analytical skills, business acumen, and the ability to communicate effectively with stakeholders."
-    },
-    {
-      "id": 13,
-      "applicants" : 455,
-      "name": "Digital Marketing Specialist",
-      "company": "MNO Marketing Solutions",
-      "location": "Pune",
-      "startDate": "Immediately",
-      "min-ctc": 3,
-      "max-ctc": 6,
-      "min-experience": 1,
-      "max-experience": 3,
-      "postTime": "1 week ago",
-      "status": "Job",
-      "image": "/Jobs Logo/MNO.png",
-      "openings": 5,
-      "aboutCompany": "MNO Marketing Solutions is a leading digital marketing agency specializing in helping businesses enhance their online presence and reach their target audience. We provide a wide range of digital marketing services to drive brand awareness and generate leads.",
+      "openings": 2,
+      "aboutCompany": "XYZ Software Solutions is a leading provider of back end development services. We specialize in building robust and scalable server-side applications that power modern web and mobile applications.",
       "afterProbation": "After completing the probation period, employees will be eligible for benefits such as health insurance, performance bonuses, and professional development opportunities.",
       "perks": [
         "Flexible work hours",
-        "Remote work options",
+        "Opportunity to work with cutting-edge technologies",
         "Competitive salary",
-        "Opportunity for growth"
+        "Collaborative team"
       ],
       "skillsRequired": [
-        "Social media marketing",
-        "SEO/SEM",
-        "Content marketing",
-        "Google Analytics",
-        "Creative thinking"
+        "Java",
+        "Python",
+        "Database management",
+        "API development",
+        "Server-side programming"
       ],
-      "aboutJob": "As a digital marketing specialist, you will be responsible for planning and executing digital marketing campaigns across various platforms. You should have a strong understanding of digital marketing strategies, be well-versed in social media and SEO techniques, and have the ability to analyze campaign performance and optimize results."
+      "aboutJob": "As a back end developer, you will be responsible for designing and implementing the server-side logic of web and mobile applications. You should have a strong command of programming languages and be able to work collaboratively with front end developers and database administrators to deliver high-quality software solutions."
     },
     {
-      "id": 14,
-      "applicants" : 754,
-      "name": "Product Manager",
-      "company": "PQR Tech Solutions",
-      "location": "Hyderabad",
+      "id": 13,
+      "applicants": 15,
+      "name": "Data Analyst",
+      "company": "Data Insights Ltd.",
+      "location": "San Francisco",
       "startDate": "1 month from now",
       "min-ctc": 6,
       "max-ctc": 10,
-      "min-experience": 4,
-      "max-experience": 8,
+      "min-experience": 2,
+      "max-experience": 5,
       "postTime": "3 days ago",
       "status": "Job",
-      "image": "/Jobs Logo/PQR.png",
-      "openings": 3,
-      "aboutCompany": "PQR Tech Solutions is a leading technology solutions provider specializing in product development and innovation. We help businesses create and launch successful products that meet market demands and drive business growth.",
-      "afterProbation": "Upon successful completion of the probation period, employees will receive benefits such as health insurance, retirement plans, and opportunities for professional growth.",
+      "image": "/Jobs Logo/MNO.png",
+      "openings": 1,
+      "aboutCompany": "Data Insights Ltd. is a leading data analytics company that helps businesses make data-driven decisions. We provide comprehensive data analysis solutions to our clients, enabling them to gain valuable insights and drive business growth.",
+      "afterProbation": "After completing the probation period, employees will be eligible for benefits such as health insurance, performance bonuses, and professional development opportunities.",
       "perks": [
-        "Flexible work schedule",
-        "Data-driven work environment",
-        "Competitive compensation",
-        "Continuous learning opportunities"
+        "Flexible work hours",
+        "Opportunity to work with large datasets",
+        "Competitive salary",
+        "Collaborative team"
       ],
       "skillsRequired": [
-        "Product lifecycle management",
-        "Market research",
-        "Product roadmap development",
-        "Agile methodology",
-        "Communication skills"
+        "Data cleaning",
+        "Statistical analysis",
+        "Data visualization",
+        "SQL",
+        "Python"
       ],
-      "aboutJob": "As a product manager, you will be responsible for overseeing the development and launch of new products. You should have a strong understanding of the product development lifecycle, be able to conduct market research, define product roadmaps, and collaborate with cross-functional teams to deliver successful products."
+      "aboutJob": "As a data analyst, you will be responsible for collecting, analyzing, and interpreting complex data sets. You should have a strong background in data analysis techniques and be proficient in programming languages such as SQL and Python. Your insights will play a crucial role in driving data-driven decision-making within the organization."
     },
     {
-      "id": 15,
-      "applicants" : 45,
-      "name": "Graphic Designer",
-      "company": "LMN Creative Agency",
-      "location": "Chennai",
+      "id": 14,
+      "applicants": 28,
+      "name": "Mobile App Development",
+      "company": "Mobile Solutions Inc.",
+      "location": "Seattle",
       "startDate": "Immediately",
-      "min-ctc": 3,
-      "max-ctc": 5,
-      "min-experience": 1,
-      "max-experience": 3,
-      "postTime": "2 weeks ago",
-      "status": "Job",
-      "image": "/Jobs Logo/LMN.png",
-      "openings": 2,
-      "aboutCompany": "LMN Creative Agency is a leading design and branding agency specializing in creating visually stunning and impactful designs. We work with clients from various industries to deliver compelling visual experiences that resonate with their target audience.",
-      "afterProbation": "After the probationary period, employees will have access to benefits such as health insurance, retirement plans, and opportunities for professional growth.",
-      "perks": [
-        "Flexible work schedule",
-        "Creative work environment",
-        "Competitive compensation",
-        "Opportunity for skill development"
-      ],
-      "skillsRequired": [
-        "Adobe Photoshop/Illustrator/InDesign",
-        "Typography",
-        "Visual design",
-        "Brand identity",
-        "Attention to detail"
-      ],
-      "aboutJob": "As a graphic designer, you will be responsible for creating visual concepts, graphics, and layouts for various digital and print media. You should have a strong command of design software and tools, a keen eye for aesthetics, and the ability to effectively communicate visual messages through your designs."
-    },
-    {
-      "id": 16,
-      "applicants" : 98,
-      "name": "Financial Analyst",
-      "company": "GHI Financial Services",
-      "location": "Mumbai",
-      "startDate": "2 weeks from now",
       "min-ctc": 5,
       "max-ctc": 8,
       "min-experience": 3,
       "max-experience": 6,
       "postTime": "4 days ago",
       "status": "Job",
-      "image": "/Jobs Logo/JKLM.png",
-      "openings": 4,
-      "aboutCompany": "GHI Financial Services is a leading financial advisory firm specializing in providing strategic financial planning and analysis to individuals and businesses. We help our clients make informed financial decisions and achieve their financial goals.",
-      "afterProbation": "Upon successful completion of the probation period, employees will have access to benefits such as health insurance, retirement plans, and opportunities for professional growth.",
-      "perks": [
-        "Flexible work environment",
-        "Opportunity to work with diverse clients",
-        "Competitive salary package",
-        "Continuous learning opportunities"
-      ],
-      "skillsRequired": [
-        "Financial analysis",
-        "Financial modeling",
-        "Budgeting",
-        "Forecasting",
-        "Analytical skills"
-      ],
-      "aboutJob": "As a financial analyst, you will be responsible for analyzing financial data, preparing reports, and providing insights and recommendations to clients. You should have a strong understanding of financial analysis techniques, be proficient in financial modeling, and have the ability to effectively communicate complex financial information."
-    },
-    {
-      "id": 17,
-      "applicants" : 12,
-      "name": "Human Resources Manager",
-      "company": "JKL HR Solutions",
-      "location": "Delhi",
-      "startDate": "Immediately",
-      "min-ctc": 6,
-      "max-ctc": 9,
-      "min-experience": 4,
-      "max-experience": 8,
-      "postTime": "1 day ago",
-      "status": "Job",
-      "image": "/Jobs Logo/JKL.png",
+      "image": "/Jobs Logo/PQR.png",
       "openings": 2,
-      "aboutCompany": "JKL HR Solutions is a leading human resources consulting firm specializing in providing comprehensive HR solutions to businesses. We assist organizations in attracting, retaining, and developing top talent through effective HR strategies and practices.",
+      "aboutCompany": "Mobile Solutions Inc. is a leading mobile app development company. We specialize in creating innovative and user-friendly mobile applications for clients across various industries.",
       "afterProbation": "After completing the probation period, employees will be eligible for benefits such as health insurance, performance bonuses, and professional development opportunities.",
       "perks": [
         "Flexible work hours",
-        "Opportunity to work with diverse clients",
+        "Opportunity to work on cutting-edge projects",
         "Competitive salary",
         "Collaborative team"
       ],
       "skillsRequired": [
-        "Recruitment and selection",
-        "Employee relations",
-        "Performance management",
-        "HR policies and procedures",
-        "Communication skills"
+        "iOS development",
+        "Android development",
+        "Cross-platform development",
+        "Mobile UI design",
+        "API integration"
       ],
-      "aboutJob": "As a human resources manager, you will be responsible for overseeing all aspects of HR operations, including recruitment, employee relations, performance management, and policy development. You should have strong interpersonal skills, be well-versed in HR best practices, and have the ability to effectively manage and develop a high-performing workforce."
+      "aboutJob": "As a mobile app developer, you will be responsible for designing and building mobile applications for iOS and Android platforms. You should have a strong command of mobile app development frameworks and be able to work collaboratively with designers and back end developers to create engaging and intuitive user experiences."
     },
     {
-      "id": 18,
-      "applicants" : 67,
-      "name": "Sales Manager",
-      "company": "RST Sales Solutions",
-      "location": "Bangalore",
-      "startDate": "3 weeks from now",
+      "id": 15,
+      "applicants": 21,
+      "name": "Full Stack Development",
+      "company": "Tech Solutions Ltd.",
+      "location": "London",
+      "startDate": "Immediately",
+      "min-ctc": 6,
+      "max-ctc": 10,
+      "min-experience": 4,
+      "max-experience": 8,
+      "postTime": "5 days ago",
+      "status": "Job",
+      "image": "/Jobs Logo/LMN.png",
+      "openings": 3,
+      "aboutCompany": "Tech Solutions Ltd. is a leading technology solutions provider. We offer end-to-end software development services, specializing in full stack development to deliver comprehensive and scalable solutions to our clients.",
+      "afterProbation": "After completing the probation period, employees will be eligible for benefits such as health insurance, performance bonuses, and professional development opportunities.",
+      "perks": [
+        "Flexible work hours",
+        "Opportunity to work on complex projects",
+        "Competitive salary",
+        "Collaborative team"
+      ],
+      "skillsRequired": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Java",
+        "Database management"
+      ],
+      "aboutJob": "As a full stack developer, you will be responsible for designing and implementing both the front end and back end components of web applications. You should have a strong understanding of web development technologies and be able to work collaboratively with designers and back end developers to deliver high-quality software solutions."
+    },
+    {
+      "id": 16,
+      "applicants": 18,
+      "name": "UI/UX Designer",
+      "company": "Creative Designs Ltd.",
+      "location": "Paris",
+      "startDate": "2 weeks from now",
+      "min-ctc": 5,
+      "max-ctc": 9,
+      "min-experience": 3,
+      "max-experience": 6,
+      "postTime": "6 days ago",
+      "status": "Job",
+      "image": "/Jobs Logo/JKLM.png",
+      "openings": 2,
+      "aboutCompany": "Creative Designs Ltd. is a renowned design agency specializing in UI/UX design. We create visually appealing and user-friendly interfaces for websites, mobile applications, and other digital products.",
+      "afterProbation": "After completing the probation period, employees will be eligible for benefits such as health insurance, performance bonuses, and professional development opportunities.",
+      "perks": [
+        "Flexible work hours",
+        "Opportunity to work on diverse design projects",
+        "Competitive salary",
+        "Collaborative team"
+      ],
+      "skillsRequired": [
+        "User interface design",
+        "User experience design",
+        "Wireframing",
+        "Prototyping",
+        "Visual design"
+      ],
+      "aboutJob": "As a UI/UX designer, you will be responsible for creating visually appealing and user-friendly interfaces for digital products. You should have a strong sense of aesthetics and be proficient in design tools and prototyping software. Your designs will play a crucial role in enhancing user satisfaction and engagement."
+    },
+    {
+      "id": 17,
+      "applicants": 15,
+      "name": "Back End Development",
+      "company": "Tech Solutions Ltd.",
+      "location": "San Francisco",
+      "startDate": "2 weeks from now",
       "min-ctc": 7,
       "max-ctc": 12,
       "min-experience": 5,
       "max-experience": 10,
-      "postTime": "2 days ago",
+      "postTime": "1 day ago",
       "status": "Job",
-      "image": "/Jobs Logo/RST.png",
-      "openings": 3,
-      "aboutCompany": "RST Sales Solutions is a leading sales consulting firm specializing in helping businesses drive revenue growth and achieve sales targets. We provide strategic sales solutions, training, and coaching to sales teams to maximize their performance and effectiveness.",
-      "afterProbation": "Upon successful completion of the probation period, employees will receive benefits such as health insurance, retirement plans, and opportunities for professional growth.",
-      "perks": [
-        "Flexible work schedule",
-        "Data-driven work environment",
-        "Competitive compensation",
-        "Continuous learning opportunities"
-      ],
-      "skillsRequired": [
-        "Sales strategy",
-        "Business development",
-        "Relationship management",
-        "Negotiation skills",
-        "Leadership skills"
-      ],
-      "aboutJob": "As a sales manager, you will be responsible for leading and managing a sales team, developing sales strategies, and driving revenue growth. You should have a proven track record in sales, excellent leadership skills, and the ability to build and maintain strong customer relationships."
-    },
-    {
-      "id": 19,
-      "applicants" : 59,
-      "name": "Operations Manager",
-      "company": "OPQ Operations",
-      "location": "Chennai",
-      "startDate": "Immediately",
-      "min-ctc": 8,
-      "max-ctc": 12,
-      "min-experience": 6,
-      "max-experience": 10,
-      "postTime": "1 week ago",
-      "status": "Job",
-      "image": "/Jobs Logo/EFGI.png",
+      "image": "/Jobs Logo/JKL.png",
       "openings": 2,
-      "aboutCompany": "OPQ Operations is a leading operations management company specializing in helping businesses streamline their operations, improve efficiency, and enhance productivity. We provide strategic solutions and operational support to optimize business processes.",
+      "aboutCompany": "Tech Solutions Ltd. is a leading technology solutions provider. We offer end-to-end software development services, specializing in back end development to build robust and scalable applications for our clients.",
       "afterProbation": "After completing the probation period, employees will be eligible for benefits such as health insurance, performance bonuses, and professional development opportunities.",
       "perks": [
         "Flexible work hours",
-        "Opportunity to work with diverse clients",
+        "Opportunity to work on challenging projects",
         "Competitive salary",
         "Collaborative team"
       ],
       "skillsRequired": [
-        "Operations management",
-        "Process improvement",
-        "Project management",
-        "Analytical skills",
-        "Leadership skills"
+        "Java",
+        "Python",
+        "Database management",
+        "API development",
+        "Security implementation"
       ],
-      "aboutJob": "As an operations manager, you will be responsible for overseeing and optimizing business operations, implementing process improvements, and ensuring operational efficiency. You should have strong analytical and problem-solving skills, excellent leadership abilities, and the ability to drive operational excellence."
+      "aboutJob": "As a back end developer, you will be responsible for designing, implementing, and maintaining the server-side components of web applications. You should have a strong understanding of back end technologies and be proficient in programming languages like Java and Python. Your contributions will help create reliable and efficient web solutions."
     },
     {
-      "id": 20,
-      "applicants" : 34,
-      "name": "Content Writer",
-      "company": "ABC Content Solutions",
-      "location": "Mumbai",
-      "startDate": "2 weeks from now",
-      "min-ctc": 4,
-      "max-ctc": 7,
+      "id": 18,
+      "applicants": 25,
+      "name": "Front End Development",
+      "company": "WebTech Solutions",
+      "location": "New York",
+      "startDate": "Immediately",
+      "min-ctc": 6,
+      "max-ctc": 10,
+      "min-experience": 3,
+      "max-experience": 7,
+      "postTime": "2 days ago",
+      "status": "Job",
+      "image": "/Jobs Logo/RST.png",
+      "openings": 3,
+      "aboutCompany": "WebTech Solutions is a leading web development company. We specialize in creating responsive and user-friendly web applications for businesses of all sizes.",
+      "afterProbation": "After completing the probation period, employees will be eligible for benefits such as health insurance, performance bonuses, and professional development opportunities.",
+      "perks": [
+        "Flexible work hours",
+        "Opportunity to work with modern web technologies",
+        "Competitive salary",
+        "Collaborative team"
+      ],
+      "skillsRequired": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Front end frameworks",
+        "Responsive design"
+      ],
+      "aboutJob": "As a front end developer, you will be responsible for translating design mockups into interactive web interfaces. You should have a strong command of web technologies and be skilled in HTML, CSS, and JavaScript. Your work will contribute to delivering visually appealing and seamless user experiences."
+    },
+    {
+      "id": 19,
+      "applicants": 12,
+      "name": "Data Analyst",
+      "company": "Insights Analytics",
+      "location": "Chicago",
+      "startDate": "3 weeks from now",
+      "min-ctc": 5,
+      "max-ctc": 8,
       "min-experience": 2,
       "max-experience": 5,
       "postTime": "3 days ago",
       "status": "Job",
-      "image": "/Jobs Logo/ABC.png",
-      "openings": 4,
-      "aboutCompany": "ABC Content Solutions is a leading content creation and marketing agency specializing in helping businesses create engaging and impactful content. We provide a wide range of content services, including copywriting, content strategy, and content marketing.",
-      "afterProbation": "Upon successful completion of the probation period, employees will have access to benefits such as health insurance, retirement plans, and opportunities for professional growth.",
+      "image": "/Jobs Logo/EFGI.png",
+      "openings": 2,
+      "aboutCompany": "Insights Analytics is a data-driven consulting firm. We help businesses make informed decisions by analyzing and interpreting data to extract meaningful insights.",
+      "afterProbation": "After completing the probation period, employees will be eligible for benefits such as health insurance, performance bonuses, and professional development opportunities.",
       "perks": [
-        "Flexible work schedule",
-        "Opportunity to work with diverse clients",
-        "Competitive compensation",
-        "Continuous learning opportunities"
+        "Flexible work hours",
+        "Opportunity to work on diverse data projects",
+        "Competitive salary",
+        "Collaborative team"
       ],
       "skillsRequired": [
-        "Copywriting",
-        "Content creation",
-        "SEO optimization",
-        "Creative thinking",
-        "Attention to detail"
+        "Data analysis",
+        "Statistical analysis",
+        "Data visualization",
+        "SQL",
+        "Data mining"
       ],
-      "aboutJob": "As a content writer, you will be responsible for creating engaging and informative content for various platforms, including websites, blogs, social media, and marketing materials. You should have excellent writing skills, a strong command of grammar and punctuation, and the ability to adapt your writing style to different audiences and topics."
+      "aboutJob": "As a data analyst, you will be responsible for collecting, organizing, and analyzing data to help businesses make data-driven decisions. You should have a strong analytical mindset and be proficient in data analysis tools and techniques. Your insights will drive strategic business outcomes."
+    },
+    {
+      "id": 20,
+      "applicants": 20,
+      "name": "Mobile App Development",
+      "company": "AppWorks Technologies",
+      "location": "London",
+      "startDate": "4 weeks from now",
+      "min-ctc": 8,
+      "max-ctc": 14,
+      "min-experience": 4,
+      "max-experience": 8,
+      "postTime": "4 days ago",
+      "status": "Job",
+      "image": "/Jobs Logo/ABC.png",
+      "openings": 3,
+      "aboutCompany": "AppWorks Technologies is a mobile app development company known for building innovative and user-friendly mobile applications for various platforms, including iOS and Android.",
+      "afterProbation": "After completing the probation period, employees will be eligible for benefits such as health insurance, performance bonuses, and professional development opportunities.",
+      "perks": [
+        "Flexible work hours",
+        "Opportunity to work on cutting-edge mobile technologies",
+        "Competitive salary",
+        "Collaborative team"
+      ],
+      "skillsRequired": [
+        "Mobile app development",
+        "iOS",
+        "Android",
+        "UI/UX design",
+        "API integration"
+      ],
+      "aboutJob": "As a mobile app developer, you will be responsible for designing, developing, and maintaining mobile applications for iOS and Android platforms. You should have a strong command of mobile development frameworks and be proficient in programming languages like Swift and Kotlin. Your apps will contribute to enhancing user experiences on mobile devices."
     }
   ]
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,29 +1,72 @@
-import React, { useRef } from "react";
-import { useParams, useLocation } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { useParams, useLocation, } from "react-router-dom";
 import data from "../Jobs.json";
+
 
 const SingleJob = () => {
   const { id } = useParams();
   const textRef = useRef(null);
   const location = useLocation();
+  const [file, setfile] = useState(null);
+  const [file2, setfile2] = useState(null);
+  const handdleFile = (event)=>{
+    setfile(event.target.files[0])
+    document.getElementById('fileLabel').innerHTML = event.target.files[0].name
+  }
+  const handleUpload = ()=>{
+    if(file){
+      console.log(file)
+      const formData = new FormData();
+      formData.append('file', file);
+      // console.log(formData)
+
+      // TODO : send data 
+
+      setfile(null);
+    }
+  }
+
+  const handdleFile2 = (event)=>{
+    setfile2(event.target.files[0])
+    document.getElementById('fileLabel2').innerHTML = event.target.files[0].name
+  }
+  const handleUpload2 = ()=>{
+    if(file2){
+      console.log(file2)
+      const formData = new FormData();
+      formData.append('file', file2);
+      // console.log(formData)
+
+      // TODO : send data 
+
+      setfile2(null);
+    }
+  }
+
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+  
 
   const copyToClipboard = () => {
     const text = textRef.current.innerText;
     navigator.clipboard
       .writeText(text)
       .then(() => {
-        alert("Copied");
+        // alert("Copied");
+        // TODO
       })
       .catch(() => {
-        alert("some error occured");
+        // alert("some error occured");
+        // TODO
       });
   };
-  const handleUpload = ()=>{
-    document.getElementsByClassName('file-upload').file_upload();
-  }
+  
 
   return (
-    <div className="container mt-32">
+    <div className="container my-32">
       <div class="card w-100">
         <div class="card-body">
           <h5 class="card-title text-center font-extrabold">
@@ -197,7 +240,7 @@ const SingleJob = () => {
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <form>
-              <div class="modal-header">
+              <div class="modal-header bg-gray-100">
                 <div>
                   <h5 class="modal-title font-bold" id="exampleModalLongTitle">
                     Applying for {data.jobs.at(id - 1).name}
@@ -219,7 +262,7 @@ const SingleJob = () => {
                 </h5>
                 <div id="fnln">
                   <div className="form-group my-2 col-6">
-                    <label className="font-medium" htmlfor="fn">
+                    <label className="font-medium text-gray-700" htmlfor="fn">
                       First Name
                     </label>
                     <input
@@ -231,7 +274,7 @@ const SingleJob = () => {
                     />
                   </div>
                   <div className="form-group my-2 col-6">
-                    <label className="font-medium" htmlfor="ln">
+                    <label className="font-medium text-gray-700" htmlfor="ln">
                       Last Name
                     </label>
                     <input
@@ -246,7 +289,7 @@ const SingleJob = () => {
 
                 <div id="fnln">
                   <div className="form-group my-2 col-6">
-                    <label className="font-medium" htmlfor="email">
+                    <label className="font-medium text-gray-700" htmlfor="email">
                       Email address
                     </label>
                     <input
@@ -260,7 +303,7 @@ const SingleJob = () => {
                   </div>
 
                   <div className="form-group my-2 col-6">
-                    <label className="font-medium" htmlfor="phn">
+                    <label className="font-medium text-gray-700" htmlfor="phn">
                       Phone
                     </label>
                     <input
@@ -268,13 +311,13 @@ const SingleJob = () => {
                       type="tel"
                       className="form-control"
                       id="phn"
-                      placeholder="0000000000"
+                      placeholder="9999999999"
                     />
                   </div>
                 </div>
                 <div className="form-group mt-5 col-12">
                   <h5 className="font-medium mb-3">Cover Letter</h5>
-                  <label className="font-medium" htmlfor="exampleInputName1">
+                  <label className="font-medium text-gray-700" htmlfor="exampleInputName1">
                     Why should you be hired for this role?
                   </label>
                   <textarea
@@ -289,26 +332,55 @@ const SingleJob = () => {
 
                 <div className="form-group mt-5 col-12">
                   <h5 className="font-medium mb-3">Upload Resume</h5>
-                  <label className="font-medium" htmlfor="exampleInputName1">
-                    Kindly provide an updated version of your resume for our
+                  <label className="font-medium text-gray-700" htmlfor="exampleInputName1">
+                    Kindly provide an latest version of your resume for our
                     records.
                   </label>
                   <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text" onClick={handleUpload}>Upload</span>
+                    <div class="input-group-prepend cursor-pointer">
+                      <span class="input-group-text btn btn-primary"  onClick={handleUpload}>Upload</span>
                     </div>
                     <div class="custom-file">
                       <input
                         type="file"
                         class="custom-file-input"
                         id="inputGroupFile01"
+                        onChange={handdleFile}
                       />
-                      <label class="custom-file-label" for="inputGroupFile01">
+                      <label id="fileLabel" class="custom-file-label" for="inputGroupFile01">
                         Choose file
                       </label>
                     </div>
                   </div>
                 </div>
+
+
+
+                <div className="form-group mt-5 col-12">
+                  <h5 className="font-medium mb-3">Upload Documents</h5>
+                  <label className="font-medium text-gray-700" htmlfor="exampleInputName1">
+                  Please provide any relevant certificates, hackathon wins, or awards related to this job?
+                  </label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend cursor-pointer">
+                      <span class="input-group-text btn btn-primary"  onClick={handleUpload2}>Upload</span>
+                    </div>
+                    <div class="custom-file">
+                      <input
+                        type="file"
+                        class="custom-file-input"
+                        id="inputGroupFile02"
+                        onChange={handdleFile2}
+                      />
+                      <label id="fileLabel2" class="custom-file-label" for="inputGroupFile01">
+                        Choose file
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+
+
 
                 <div className="my-1">
                   <small className="form-text text-muted"></small>
@@ -316,7 +388,7 @@ const SingleJob = () => {
                 <div></div>
               </div>
 
-              <div class="modal-footer">
+              <div class="modal-footer bg-gray-100">
                 <button type="submit" className="btn mt-2 view2btn">
                   Submit application
                 </button>
