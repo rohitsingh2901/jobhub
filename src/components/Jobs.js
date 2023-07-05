@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import data from "../Jobs.json";
 import ReactPaginate from 'react-paginate';
 import { Link } from "react-router-dom";
-
+import Select from "react-select";
 
 const Jobs = () => {
   const itemsPerPage = 5; 
@@ -10,11 +10,10 @@ const Jobs = () => {
   const [id, setid] = useState(null)
   const [file, setfile] = useState(null);
   const [file2, setfile2] = useState(null);
-  const [SearchText, setSearchText] = useState(null)
-  const [searched, setsearched] = useState(false)
   const [filter, setfilter] = useState(null)
   const [len, setlen] = useState(data.jobs.length)
-  const [inputchecked, setinputchecked] = useState({})
+  // const [inputchecked, setinputchecked] = useState({})
+  const [inputchecked, setinputchecked] = useState(null)
   const handleApply = (eid)=>{
     setid(eid);
   }
@@ -61,84 +60,99 @@ const Jobs = () => {
       setfile2(null);
     }
   }
-  const handleSearchChange = (e)=>{
-    e.preventDefault()
-    setSearchText(e.target.value)
-  }
-  const handleSearch = (e)=>{
-    const filteredData= data.jobs.filter((job) =>{
-      return (
-        job.name.toLowerCase().includes(SearchText.toLowerCase())
-      );
-    }
-    );
-    setfilter(filteredData)
-    setlen(filteredData.length)
-    e.preventDefault()
-    console.log(SearchText)
-    if(SearchText){
-      setsearched(true)
-    }
 
-  }
+  
 
   const handleCheck = (event)=>{
-    const { name, checked } = event.target;
-    setinputchecked((prevState) => ({
-      ...prevState,
-      [name]: checked,
-    }));    
+    setinputchecked(event.value)
   }
 
   
   const [CheckCheck, setCheckCheck] = useState(false)
 
+  
+  const options = [
+    { value: '', label: 'Select' },
+    { value : "Front End Development" ,label : "Front End Development"},
+      {value : "Back End Development" ,label : "Back End Development"},
+      {value : "Data Analyst" ,label : "Data Analyst"},
+      {value : "Mobile App Development" ,label : "Mobile App Development"},
+      {value : "Full Stack Development" ,label : "Full Stack Development"},
+      {value : "UI/UX Designer" ,label : "UI/UX Designer"},
+  
+  ]
+  const options2 = [
+    { value: '', label: 'Select' },
+    { value : "New Delhi" ,label : "New Delhi"},
+      {value : "Jaipur" ,label : "Jaipur"},
+      {value : "Pune" ,label : "Pune"},
+      {value : "Hyderabad" ,label : "Hyderabad"},
+      {value : "Chennai" ,label : "Chennai"},
+      {value : "Mumbai" ,label : "Mumbai"},
+      {value : "Bangalore" ,label : "Bangalore"},
+  
+  ]
+
+
   useEffect(() => {
-    const text1 = document.getElementById('Checkbox1').nextSibling.innerHTML; 
-    const text2 = document.getElementById('Checkbox2').nextSibling.innerHTML; 
-    const text3 = document.getElementById('Checkbox3').nextSibling.innerHTML; 
-    const text4 = document.getElementById('Checkbox4').nextSibling.innerHTML; 
-    const text5 = document.getElementById('Checkbox5').nextSibling.innerHTML; 
-    const text6 = document.getElementById('Checkbox6').nextSibling.innerHTML; 
+    
+
+    const text0 = options[0].value; 
+    const text1 = options[1].value; 
+    const text2 = options[2].value; 
+    const text3 = options[3].value; 
+    const text4 = options[4].value; 
+    const text5 = options[5].value; 
+    const text6 = options[6].value; 
+    const text11 = options2[0].value; 
+    const text12 = options2[1].value; 
+    const text13 = options2[2].value; 
+    const text14 = options2[3].value; 
+    const text15= options2[4].value; 
+    const text16 = options2[5].value; 
+    const text17 = options2[6].value; 
+    const text00= options2[7].value; 
+   
+    
     const filteredData= data.jobs.filter((job) =>{
       return (
-        (inputchecked.Checkbox1 && inputchecked.Checkbox1===true ?job.name.toLowerCase().includes(text1.toLowerCase()):'')||
-        (inputchecked.Checkbox2 && inputchecked.Checkbox2===true ?job.name.toLowerCase().includes(text2.toLowerCase()):'')||
-        (inputchecked.Checkbox3 && inputchecked.Checkbox3===true ?job.name.toLowerCase().includes(text3.toLowerCase()):'')||
-        (inputchecked.Checkbox4 && inputchecked.Checkbox4===true ?job.name.toLowerCase().includes(text4.toLowerCase()):'')||
-        (inputchecked.Checkbox5 && inputchecked.Checkbox5===true ?job.name.toLowerCase().includes(text5.toLowerCase()):'')||
-        (inputchecked.Checkbox6 && inputchecked.Checkbox6===true ?job.name.toLowerCase().includes(text6.toLowerCase()):'')
+        (inputchecked===text0?job.name.toLowerCase().includes(text0.toLowerCase()):'')||
+        (inputchecked===text1?job.name.toLowerCase().includes(text1.toLowerCase()):'')||
+        (inputchecked===text2?job.name.toLowerCase().includes(text2.toLowerCase()):'')||
+        (inputchecked===text3?job.name.toLowerCase().includes(text3.toLowerCase()):'')||
+        (inputchecked===text4?job.name.toLowerCase().includes(text4.toLowerCase()):'')||
+        (inputchecked===text5?job.name.toLowerCase().includes(text5.toLowerCase()):'')||
+        (inputchecked===text6?job.name.toLowerCase().includes(text6.toLowerCase()):'')||
+        (inputchecked===text0?job.location.toLowerCase().includes(text00.toLowerCase()):'')||
+        (inputchecked===text1?job.location.toLowerCase().includes(text11.toLowerCase()):'')||
+        (inputchecked===text2?job.location.toLowerCase().includes(text12.toLowerCase()):'')||
+        (inputchecked===text3?job.location.toLowerCase().includes(text13.toLowerCase()):'')||
+        (inputchecked===text4?job.location.toLowerCase().includes(text14.toLowerCase()):'')||
+        (inputchecked===text5?job.location.toLowerCase().includes(text15.toLowerCase()):'')||
+        (inputchecked===text6?job.location.toLowerCase().includes(text16.toLowerCase()):'')||
+        (inputchecked===text6?job.location.toLowerCase().includes(text17.toLowerCase()):'')
       );
     }
     );
-    setlen(filteredData.length)
-      const renderData1 = filteredData.slice(
-        currentPage * itemsPerPage,
-        (currentPage + 1) * itemsPerPage
-      );
-      setfilter(renderData1)
- if((inputchecked.Checkbox1===undefined ||  inputchecked.Checkbox1===false)  &&
-    (inputchecked.Checkbox2===undefined ||  inputchecked.Checkbox2===false)  &&
-    (inputchecked.Checkbox3===undefined ||  inputchecked.Checkbox3===false)  &&
-    (inputchecked.Checkbox4===undefined ||  inputchecked.Checkbox4===false)  &&
-    (inputchecked.Checkbox5===undefined ||  inputchecked.Checkbox5===false)  &&
-    (inputchecked.Checkbox6===undefined ||  inputchecked.Checkbox6===false)  ){
+    
+ if((inputchecked===null)){
       setCheckCheck(false); 
       setlen(data.jobs.length)
     }
     else{
       setCheckCheck(true);
-      setlen(filteredData.length)
-      const renderData2 = filteredData.slice(
+      const renderData2 =  filteredData.slice(
         currentPage * itemsPerPage,
         (currentPage + 1) * itemsPerPage
-      );
+        );
+      setlen(filteredData.length)
       setfilter(renderData2)
-      console.log(currentPage)
+      setCurrentPage(currentPage)
     }
     
+   
 
-  }, [inputchecked]);
+  }, [inputchecked,currentPage]);
 
 
 
@@ -149,41 +163,35 @@ const Jobs = () => {
     
     <div className="mt-16">
       <div id="search">
-      <div>
-        <div class="form-check form-check-inline">
-      <input class="form-check-input" name="Checkbox1" onChange={handleCheck} checked={setinputchecked.Checkbox1} type="checkbox" id="Checkbox1" />
-      <label class="form-check-label" for="inlineCheckbox1">Front End Development</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" name="Checkbox2" onChange={handleCheck} checked={setinputchecked.Checkbox2} type="checkbox" id="Checkbox2" />
-        <label class="form-check-label" for="inlineCheckbox2">Back End Development</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" name="Checkbox3" onChange={handleCheck} checked={setinputchecked.Checkbox3} type="checkbox" id="Checkbox3" />
-        <label class="form-check-label" for="inlineCheckbox3">Data Analyst</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" name="Checkbox4" onChange={handleCheck} checked={setinputchecked.Checkbox4} type="checkbox" id="Checkbox4" />
-        <label class="form-check-label" for="inlineCheckbox4">Mobile App Development</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" name="Checkbox5" onChange={handleCheck} checked={setinputchecked.Checkbox5} type="checkbox" id="Checkbox5" />
-        <label class="form-check-label" for="inlineCheckbox5">Full Stack Development</label>
-      </div>
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" name="Checkbox6" onChange={handleCheck} checked={setinputchecked.Checkbox6} type="checkbox" id="Checkbox6" />
-        <label class="form-check-label" for="inlineCheckbox6">UI/UX Designer</label>
-      </div>
+      <div className="grid"> 
+      <h6>Filter</h6>
+    
+      <Select
+      id="jobSelect"
+      options={options}
+      placeholder="e.g. Web development"
+      onChange={handleCheck}
+      defaultValue={inputchecked}
+      />
+
+      <h6>Location</h6>
+      <Select
+      id="locSelect"
+      options={options2}
+      placeholder="e.g. Delhi"
+      onChange={handleCheck}
+      defaultValue={inputchecked}
+      />
+      
+
+
+
+
         </div>
-        <div>
-          <form onSubmit={handleSearch} class="search">
-            <input type="text" onChange={handleSearchChange} placeholder="Search Job" name="search2"/>
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
-        </div>
+       
       </div>
       <h1 className="text-center font-extrabold">About {len} <span className="sp"> Job </span>results</h1>
-      { !searched && !CheckCheck ? 
+      {  !CheckCheck ? 
       (
         renderData.map((element) =>( 
           <div key={element.id} className="flex justify-center mt-8">
@@ -421,7 +429,7 @@ const Jobs = () => {
             
             <div class="col-md-10">
               <div class="card-body">
-                <h5 class="card-title font-medium">{element.name}</h5>
+                <h5 class="card-title font-medium">{element.name}{element.id}</h5>
                 <p>{element.company}</p>
                 <div className="flex items-center">
                 <i class="fa-sharp fa-solid fa-location-dot mr-2 fa"></i>

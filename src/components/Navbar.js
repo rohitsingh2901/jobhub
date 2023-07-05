@@ -43,11 +43,10 @@ const Navbar = () => {
             >
           </li>
           <li class="nav-item">
-            <a
+            <Link to="/services"
               class="nav-link text-light font-weight-bolder"
               onclick="myFunction(this)"
-              href="#services"
-              >Services</a
+              >Services</Link
             >
           </li>
           <li class="nav-item">

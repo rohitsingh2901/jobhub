@@ -5,6 +5,7 @@ import Register from "./components/Register";
 import Contact from "./components/Contact";
 import Jobs from "./components/Jobs";
 import SingleJob from "./components/SingleJob";
+import Services from "./components/Services";
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
       </Routes>
       <Routes>
           <Route path="/jobs/:id" Component={SingleJob}/>
+      </Routes>
+      <Routes>
+          <Route path="/services" Component={Services}/>
       </Routes>
       
     </Router>
