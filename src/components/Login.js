@@ -17,7 +17,7 @@ const Login = () => {
     <div className="col-md-12">
       <h1 className='text-center font-extrabold'>Job<span className="sp">Hub</span></h1>
       <div className="card-body">
-        <form>
+      <form id="form">
           <div className="form-group ">
             <label className="font-medium" htmlfor="exampleInputEmail1">Email address</label>
             <input

@@ -67,7 +67,7 @@ const SingleJob = () => {
 
   return (
     <div className="container my-32">
-      <div class="card w-100">
+      <div class="card w-100" id="singlemaincard">
         <div class="card-body">
           <h5 class="card-title text-center font-extrabold">
             {data.jobs.at(id - 1).name} Job in {data.jobs.at(id - 1).location}{" "}
@@ -239,7 +239,7 @@ const SingleJob = () => {
       >
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
-            <form>
+          <form id="form">
               <div class="modal-header bg-gray-100">
                 <div>
                   <h5 class="modal-title font-bold" id="exampleModalLongTitle">

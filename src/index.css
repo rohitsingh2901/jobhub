@@ -199,6 +199,7 @@ code {
 .registerbtn{
   background-color: rgb(247, 96, 96);
   font-weight: 600;
+  outline: red;
   font-size: small;
   color: black;
 }
@@ -210,6 +211,7 @@ code {
 }
 .registerbtn:active{
   transform: scale(1.1);
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.49);
 }
 input::placeholder {
   font-size: smaller;
@@ -226,11 +228,11 @@ input::placeholder {
 #loginDiv::before{
   content: "";
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url(https://img.freepik.com/free-vector/gray-abstract-wireframe-background_53876-99911.jpg);
+  background-image: url(https://img.freepik.com/free-photo/gray-abstract-wireframe-technology-background_53876-101941.jpg?w=1380&t=st=1688597677~exp=1688598277~hmac=71dfdf7e34eeba23d8c1db637e70b6c2fb5a620a551a1c2c830dd4db58335854);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -397,7 +399,8 @@ input::placeholder {
 #map{
   width: 800px;
   height: 600px;
-  border-radius: 15px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(245, 83, 83, 0.247);
 }
 
 .pagination__page {
@@ -506,7 +509,13 @@ input::placeholder {
   border-radius: 20px;
   box-shadow: 10px 10px rgba(255, 0, 0, 0.030);
 }
-
+#singlemaincard{
+  min-width:  540px;
+  min-height: 300px;
+  border: 2px solid rgb(251, 219, 219);
+  border-radius: 20px;
+  box-shadow: 10px 10px rgba(255, 0, 0, 0.030);
+}
 
 
 
@@ -555,3 +564,45 @@ form.search::after {
   width: 300px;
   height: 50px;
 }
+
+#form input{
+  outline: red;
+  
+}
+#form input:focus{
+  outline: red;
+  box-shadow: inset 0 0 0 0.15rem rgba(255, 0, 0, 0.49);
+
+}
+#message{
+  outline: red;
+  
+}
+#message:focus{
+  outline: red;
+  box-shadow: inset 0 0 0 0.15rem rgba(255, 0, 0, 0.49);
+
+}
+
+
+#contactDiv {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+#contactDiv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139103.jpg?w=1380&t=st=1688597097~exp=1688597697~hmac=79c3b1007ccd38e7a4bb12617ce7a7ff50070d880181e87347b037f8f96a374a);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.2;
+  z-index: -1;
+}
+

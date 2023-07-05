@@ -287,9 +287,9 @@ const Jobs = () => {
 
           <div className="mx-4 mt-3">
             <h6 className="my-3">CTC</h6>
-            <form>
+            <form >
   <div class="form-group">
-  <h6><label for="formControlRange">Select min CTC</label></h6>
+  <h6><label for="formControlRange">Select minimum CTC in LPA</label></h6>
     <input type="range" class="form-control-range"  onChange={handleCheck3} defaultValue={0} min="0" max="5" step="1" id="formControlRange"/>
     <div className="flex justify-between">
       <span>0</span>
@@ -408,7 +408,7 @@ const Jobs = () => {
                 >
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
-                      <form>
+                    <form id="form">
                         <div class="modal-header bg-gray-100">
                           <div>
                             <h5
@@ -709,7 +709,7 @@ const Jobs = () => {
                 >
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
-                      <form>
+                    <form id="form">
                         <div class="modal-header bg-gray-100">
                           <div>
                             <h5

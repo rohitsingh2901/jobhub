@@ -3,10 +3,10 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div>
+    <div className='w-100 h-100' id='contactDiv'>
 
-        <div class="container mt-8">
-        <h1 class="font-extrabold text-center text-6xl">Contact Us</h1>
+        <div class="container ">
+        <h1 class="font-extrabold text-center text-6xl pt-8">Contact Us</h1>
         <hr class="my-16" />
       </div>
 
@@ -21,7 +21,7 @@ const Contact = () => {
         </div>
       </div>
 
-      <div class="flex justify-around items-center my-12" id="id1234">
+      <div class="flex justify-around items-center py-12" id="id1234">
         <div>
           <div id="map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448227.35133808805!2d76.6998436734375!3d28.6364694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfcba3000006f%3A0xacce82ee0dfaaba1!2sJobs%20Hub!5e0!3m2!1sen!2sin!4v1688328246831!5m2!1sen!2sin" title='Embd'
@@ -33,9 +33,10 @@ const Contact = () => {
         <div className="card my-4" id="cardDivC">
   <div className="row no-gutters">
     <div className="col-md-12">
-      <h1 className='text-center font-extrabold'>Contact <span className="sp">Us</span></h1>
+      <h2 className='text-center font-extrabold my-4'>Send us a  <span className="sp"> message</span></h2>
+      <hr></hr>
       <div className="card-body">
-        <form>
+      <form id="form">
           <div className="form-group ">
             <label className="font-medium" htmlfor="name">Name</label>
             <input
