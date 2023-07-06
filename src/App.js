@@ -6,20 +6,36 @@ import Contact from "./components/Contact";
 import Jobs from "./components/Jobs";
 import SingleJob from "./components/SingleJob";
 import Services from "./components/Services";
+import Alert from "./components/Alert";
+import { useState } from "react";
 
 function App() {
+
+  const [msg, setMsg] = useState(null)
+  const [typ, setTyp] = useState(null)
+  const alert = (msg,typ)=>{
+    setMsg(msg)
+    setTyp(typ)
+    setTimeout(() => {
+      setMsg(null)
+      setTyp(null)
+    }, 3000);
+  }
+
+
   return (
     <>
     <Router>
       <Navbar/>
+      <Alert alert={{msg,typ,alert}}/>
       <Routes>
-          <Route path="/login" Component={Login}/>
+          <Route path="/login" element={<Login alert={{msg,typ,alert}}/>}/>
       </Routes>
       <Routes>
-          <Route path="/register" Component={Register}/>
+          <Route path="/register" element={<Register alert={{msg,typ,alert}}/>}/>
       </Routes>
       <Routes>
-          <Route path="/contact" Component={Contact}/>
+          <Route path="/contact" element={<Contact alert={{msg,typ,alert}}/>}/>
       </Routes>
       <Routes>
           <Route path="/jobs" Component={Jobs}/>

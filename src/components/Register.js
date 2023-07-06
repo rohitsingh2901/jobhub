@@ -1,7 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const Register = () => {
+const Register = (props) => {
+  
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [fname, setFname] = useState('');
+  const [lname, setLname] = useState('');
+
+  const handleSaveCredentials = (e) => {
+    e.preventDefault()
+    const credentials = {
+      email,password,fname,lname
+    };
+    fetch('http://localhost:5000/register', {
+      method: "POST",
+      body: JSON.stringify(credentials),
+      headers: {"Content-type": "application/json"}
+    })
+    .then(response => response.json()) 
+    .then(json => {
+      console.log(json)
+      setEmail('')
+      setPassword('')
+      setFname('')
+      setLname('')
+      if(json.error){
+        props.alert.alert('Email already exists','danger');
+      }
+      else{
+        props.alert.alert('Congrats! Your can now login','success');
+      }
+    })
+    .catch(err => {
+      console.log(err)
+      props.alert.alert('Something went wrong','danger');
+    });
+
+  };
+
+
+
   return (
     <div id="registerDiv">
       <div className="container pt-32" id="containerRegister">
@@ -16,11 +56,14 @@ const Register = () => {
     <div className="col-md-12">
       <h1 className='text-center font-extrabold'>Job<span className="sp">Hub</span></h1>
       <div className="card-body">
-        <form id='form'>
+        <form id='form' onSubmit={handleSaveCredentials} >
           <div className="form-group ">
             <label className="font-medium" htmlfor="exampleInputEmail1">Email address</label>
             <input
+              required
               type="email"
+              value={email}
+              onChange={(e)=> setEmail(e.target.value)}
               className="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
@@ -30,7 +73,11 @@ const Register = () => {
           <div className="form-group my-3">
             <label className="font-medium" htmlfor="exampleInputPassword1">Password</label>
             <input
+              required
+              minLength={6}
               type="password"
+              value={password}
+              onChange={(e)=> setPassword(e.target.value)}
               className="form-control"
               id="exampleInputPassword1"
               placeholder="Must be atleast 6 characters"
@@ -40,7 +87,11 @@ const Register = () => {
           <div className="form-group my-2">
             <label className="font-medium" htmlfor="exampleInputName1">First Name</label>
             <input
+              required
+              minLength={2}
               type="text"
+              value={fname}
+              onChange={(e)=> setFname(e.target.value)}
               className="form-control"
               id="exampleInputName1"
               placeholder="John"
@@ -52,7 +103,11 @@ const Register = () => {
           <div className="form-group my-2">
             <label className="font-medium" htmlfor="exampleInputName1">Last Name</label>
             <input
+              required
+              minLength={2}
               type="text"
+              value={lname}
+              onChange={(e)=> setLname(e.target.value)}
               className="form-control"
               id="exampleInputName1"
               placeholder="Doe"

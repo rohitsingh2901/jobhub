@@ -1,8 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Login = () => {
 
+const Login = (props) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleVerifyCredentials = (e) => {
+    e.preventDefault()
+    const credentials = {
+      email,password
+    };
+    fetch('http://localhost:5000/verify', {
+      method: "POST",
+      body: JSON.stringify(credentials),
+      headers: {"Content-type": "application/json"}
+    })
+    .then(response => response.json()) 
+    .then(json => {
+      console.log(json)
+      if(json.error){
+      props.alert.alert("User not found",'danger')
+      }
+      else{
+        props.alert.alert("Verifed User",'success')
+      }
+    })
+    .catch(err => {
+      console.log(err)
+      props.alert.alert("Some error occured",'danger')
+    });
+
+  };
   return (
     <div id="loginDiv">
       <div className="container pt-32" id="containerlogin">
@@ -17,13 +46,16 @@ const Login = () => {
     <div className="col-md-12">
       <h1 className='text-center font-extrabold'>Job<span className="sp">Hub</span></h1>
       <div className="card-body">
-      <form id="form">
+      <form id="form" onSubmit={handleVerifyCredentials}>
           <div className="form-group ">
             <label className="font-medium" htmlfor="exampleInputEmail1">Email address</label>
             <input
+              required
               type="email"
               className="form-control"
               id="exampleInputEmail1L"
+              value={email}
+              onChange={(e)=> setEmail(e.target.value)}
               aria-describedby="emailHelp"
               placeholder="Type your email"
             />
@@ -31,9 +63,13 @@ const Login = () => {
           <div className="form-group my-3">
             <label className="font-medium" htmlfor="exampleInputPassword1">Password</label>
             <input
+              required
+              minLength={6}
               type="password"
               className="form-control"
               id="exampleInputPassword1L"
+              value={password}
+              onChange={(e)=> setPassword(e.target.value)}
               placeholder="Type your password"
             />
           </div>

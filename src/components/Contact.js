@@ -1,7 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
-const Contact = () => {
+const Contact = (props) => {
+  const [name, setName] = useState('')
+  const [email, setemail] = useState('')
+  const [message, setMessage] = useState('')
+
+  const handleMessage = (e)=>{
+    e.preventDefault();
+    const credentials = {
+      name,email,message
+    };
+    fetch('http://localhost:5000/contactus', {
+      method: "POST",
+      body: JSON.stringify(credentials),
+      headers: {"Content-type": "application/json"}
+    })
+    .then(response => response.json()) 
+    .then(json => {
+      console.log(json)
+      if(json.error){
+        props.alert.alert("Something went wrong",'danger')
+      }
+      else{
+        props.alert.alert("We will be in touch with you shortly",'success')
+      }
+    })
+    .catch(err => {
+      console.log(err)
+      props.alert.alert("Some error occured",'danger')
+    });
+
+  }
+
   return (
     <div className='w-100 h-100' id='contactDiv'>
 
@@ -36,12 +67,16 @@ const Contact = () => {
       <h2 className='text-center font-extrabold my-4'>Send us a  <span className="sp"> message</span></h2>
       <hr></hr>
       <div className="card-body">
-      <form id="form">
+      <form id="form" onSubmit={handleMessage}>
           <div className="form-group ">
             <label className="font-medium" htmlfor="name">Name</label>
             <input
+              required
+              minLength={3}
               type="text"
               className="form-control"
+              value={name}
+              onChange={(e)=>setName(e.target.value)}
               id="name"
               placeholder="Type your name"
             />
@@ -49,8 +84,11 @@ const Contact = () => {
           <div className="form-group my-3">
             <label className="font-medium" htmlfor="email">Email</label>
             <input
+              required
               type="email"
               className="form-control"
+              value={email}
+              onChange={(e)=>setemail(e.target.value)}
               id="email"
               placeholder="Type your email"
             />
@@ -58,11 +96,13 @@ const Contact = () => {
           <div className="form-group my-3">
             <label className="font-medium" htmlfor="message">Message</label>
             <textarea
+                  required
                   id="message"
+                  value={message}
+                    onChange={(e)=>setMessage(e.target.value)}
                   placeholder="Type your message"
                   className='form-control'
                   rows="3"
-                  required
                 ></textarea>
           </div>
           
