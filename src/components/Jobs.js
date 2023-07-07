@@ -4,7 +4,7 @@ import ReactPaginate from "react-paginate";
 import { Link } from "react-router-dom";
 import Select from "react-select";
 
-const Jobs = () => {
+const Jobs = (props) => {
   const itemsPerPage = 5;
   const [currentPage, setCurrentPage] = useState(0);
   const [id, setid] = useState(null);
@@ -17,6 +17,32 @@ const Jobs = () => {
   const [inputchecked1, setinputchecked1] = useState(null);
   const [inputchecked2, setinputchecked2] = useState(null);
   const [inputchecked3, setinputchecked3] = useState(null);
+
+  const defaultValue = {"fname": '',
+  "lname": '',
+  "email": '',
+  "phone": '',
+  "coverletter": '',
+  "resume": { type: null, required: true },
+  "document": { type: null },
+  "companyID" : -1,
+  "companyName" : ''
+}
+
+
+  const [cred, setCred] = useState(defaultValue)
+
+
+  const handleInputChange = (event) => {
+      const { name, value } = event.target;
+      setCred((prevFormData) => ({ ...prevFormData, [name]: value }));
+  };
+
+
+
+
+
+
   const handleApply = (eid) => {
     setid(eid);
   };
@@ -31,40 +57,38 @@ const Jobs = () => {
   );
 
   const handdleFile = (event) => {
+    if(event.target.files.length===0){
+      return
+    }
     setfile(event.target.files[0]);
     document.getElementById("fileLabel").innerHTML = event.target.files[0].name;
   };
-  const handleUpload = () => {
-    if (file) {
-      console.log(file);
-      const formData = new FormData();
-      formData.append("file", file);
-      // console.log(formData)
 
-      // TODO : send data
-
-      setfile(null);
-    }
-  };
 
   const handdleFile2 = (event) => {
+    
+    if(event.target.files.length===0){
+      return
+    }
     setfile2(event.target.files[0]);
     document.getElementById("fileLabel2").innerHTML =
       event.target.files[0].name;
   };
-  const handleUpload2 = () => {
-    if (file2) {
-      console.log(file2);
-      const formData = new FormData();
-      formData.append("file", file2);
-      // console.log(formData)
-
-      // TODO : send data
-
-      setfile2(null);
+  
+  useEffect(() => {
+    if(file){
+      setCred((prevFormData) => ({ ...prevFormData, "resume": file.name }));
     }
-  };
-
+    if(file2!==null){
+      setCred((prevFormData) => ({ ...prevFormData, "document": file2.name }));
+    }
+    else{
+      setCred((prevFormData) => ({ ...prevFormData, "document": '' }));
+    }
+  }, [file,file2])
+  
+  
+  
   const handleCheck = (event) => {
     setinputchecked(event.value);
   };
@@ -243,9 +267,50 @@ const Jobs = () => {
       );
       setlen(combinedResult.length);
       setfilter(renderData2);
-      setCurrentPage(currentPage);
+      setCurrentPage(0);
     }
   }, [inputchecked, currentPage, inputchecked1, inputchecked2,inputchecked3]);
+
+
+
+
+  const handleApplyForm = (event,id,name)=>{
+    event.preventDefault();
+    document.getElementsByClassName('close')[0].click();
+    document.getElementsByClassName('close')[1].click();
+    cred.companyID=id;
+    cred.companyName+=name;
+
+
+    
+    fetch('http://localhost:5000/apply', {
+      method: "POST",
+      body: JSON.stringify(cred),
+      headers: {"Content-type": "application/json"}
+    })
+    .then(response => response.json()) 
+    .then(json => {
+      console.log(json)
+      if(json.error){
+        props.alert.alert(json.error,'danger')
+      }
+      else{
+        props.alert.alert(json.success,'success')
+      }
+    })
+    .catch(err => {
+      console.log(err)
+      props.alert.alert("Some error occured",'danger')
+    })
+    .finally(()=>{
+      setCred(defaultValue)
+      document.getElementById("fileLabel").innerHTML = 'Choose file';
+      document.getElementById("fileLabel2").innerHTML = 'Choose file';
+    })
+    
+
+
+  }
 
   return (
     <div className="flex justify-center">
@@ -408,7 +473,7 @@ const Jobs = () => {
                 >
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
-                    <form id="form">
+                    <form id="form" onSubmit={(e)=>handleApplyForm(e,data.jobs.at(id - 1).id,data.jobs.at(id - 1).name)}>
                         <div class="modal-header bg-gray-100">
                           <div>
                             <h5
@@ -442,6 +507,9 @@ const Jobs = () => {
                               </label>
                               <input
                                 required
+                                name="fname"
+                                value={cred.fname}
+                                onChange={handleInputChange}
                                 type="text"
                                 className="form-control"
                                 id="fn"
@@ -456,6 +524,9 @@ const Jobs = () => {
                                 Last Name
                               </label>
                               <input
+                              name="lname"
+                              value={cred.lname}
+                              onChange={handleInputChange}
                                 required
                                 type="text"
                                 className="form-control"
@@ -474,6 +545,9 @@ const Jobs = () => {
                                 Email address
                               </label>
                               <input
+                              name="email"
+                              value={cred.email}
+                              onChange={handleInputChange}
                                 required
                                 type="email"
                                 className="form-control"
@@ -491,6 +565,9 @@ const Jobs = () => {
                                 Phone
                               </label>
                               <input
+                              name="phone"
+                              value={cred.phone}
+                              onChange={handleInputChange}
                                 required
                                 type="tel"
                                 className="form-control"
@@ -509,6 +586,9 @@ const Jobs = () => {
                             </label>
                             <textarea
                               required
+                              name="coverletter"
+                              value={cred.coverletter}
+                              onChange={handleInputChange}
                               type="text"
                               className="form-control"
                               id="exampleInputName1"
@@ -527,16 +607,11 @@ const Jobs = () => {
                               for our records.
                             </label>
                             <div class="input-group mb-3">
-                              <div class="input-group-prepend cursor-pointer">
-                                <span
-                                  class="input-group-text btn btn-primary"
-                                  onClick={handleUpload}
-                                >
-                                  Upload
-                                </span>
-                              </div>
+                              
                               <div class="custom-file">
                                 <input
+                                required
+                                  accept=".pdf,.doc,.docx"
                                   type="file"
                                   class="custom-file-input"
                                   id="inputGroupFile01"
@@ -565,16 +640,10 @@ const Jobs = () => {
                               hackathon wins, or awards related to this job?
                             </label>
                             <div class="input-group mb-3">
-                              <div class="input-group-prepend cursor-pointer">
-                                <span
-                                  class="input-group-text btn btn-primary"
-                                  onClick={handleUpload2}
-                                >
-                                  Upload
-                                </span>
-                              </div>
+                              
                               <div class="custom-file">
                                 <input
+                                  accept=".pdf,.doc,.docx,.img,.jpg"
                                   type="file"
                                   class="custom-file-input"
                                   id="inputGroupFile02"
@@ -709,7 +778,7 @@ const Jobs = () => {
                 >
                   <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
-                    <form id="form">
+                    <form id="form" onSubmit={(e)=>handleApplyForm(e,data.jobs.at(id - 1).id,data.jobs.at(id - 1).name)}>
                         <div class="modal-header bg-gray-100">
                           <div>
                             <h5
@@ -743,6 +812,9 @@ const Jobs = () => {
                               </label>
                               <input
                                 required
+                                name="fname"
+                                value={cred.fname}
+                                onChange={handleInputChange}
                                 type="text"
                                 className="form-control"
                                 id="fn"
@@ -757,6 +829,9 @@ const Jobs = () => {
                                 Last Name
                               </label>
                               <input
+                              name="lname"
+                              value={cred.lname}
+                              onChange={handleInputChange}
                                 required
                                 type="text"
                                 className="form-control"
@@ -775,6 +850,9 @@ const Jobs = () => {
                                 Email address
                               </label>
                               <input
+                              name="email"
+                              value={cred.email}
+                              onChange={handleInputChange}
                                 required
                                 type="email"
                                 className="form-control"
@@ -792,6 +870,9 @@ const Jobs = () => {
                                 Phone
                               </label>
                               <input
+                              name="phone"
+                              value={cred.phone}
+                              onChange={handleInputChange}
                                 required
                                 type="tel"
                                 className="form-control"
@@ -810,6 +891,9 @@ const Jobs = () => {
                             </label>
                             <textarea
                               required
+                              name="coverletter"
+                              value={cred.coverletter}
+                              onChange={handleInputChange}
                               type="text"
                               className="form-control"
                               id="exampleInputName1"
@@ -828,16 +912,11 @@ const Jobs = () => {
                               for our records.
                             </label>
                             <div class="input-group mb-3">
-                              <div class="input-group-prepend cursor-pointer">
-                                <span
-                                  class="input-group-text btn btn-primary"
-                                  onClick={handleUpload}
-                                >
-                                  Upload
-                                </span>
-                              </div>
+                              
                               <div class="custom-file">
                                 <input
+                                required
+                                  accept=".pdf,.doc,.docx"
                                   type="file"
                                   class="custom-file-input"
                                   id="inputGroupFile01"
@@ -866,16 +945,10 @@ const Jobs = () => {
                               hackathon wins, or awards related to this job?
                             </label>
                             <div class="input-group mb-3">
-                              <div class="input-group-prepend cursor-pointer">
-                                <span
-                                  class="input-group-text btn btn-primary"
-                                  onClick={handleUpload2}
-                                >
-                                  Upload
-                                </span>
-                              </div>
+                              
                               <div class="custom-file">
                                 <input
+                                  accept=".pdf,.doc,.docx,.img,.jpg"
                                   type="file"
                                   class="custom-file-input"
                                   id="inputGroupFile02"
@@ -928,6 +1001,7 @@ const Jobs = () => {
           pageClassName={"pagination__page"}
           pageLinkClassName={"pagination__link"}
           activeLinkClassName={"pagination__link--active"}
+          forcePage={currentPage}
         />
       </div>
     </div>

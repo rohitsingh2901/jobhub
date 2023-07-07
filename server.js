@@ -1,8 +1,10 @@
 
 const express = require('express');
+const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser');
 const Cred = require('./models/Credentials'); 
 const Contact_Us = require('./models/ContactUs'); 
+const Apply = require('./models/ApplyForm')
 var cors = require('cors')
 require('./db');
 
@@ -10,7 +12,7 @@ require('./db');
 const app = express();
 
 app.use(cors())
-
+app.use(fileUpload());
 app.use(bodyParser.json());
 
 
@@ -72,6 +74,49 @@ app.post('/contactus', (req, res) => {
     });
   
 });
+
+
+
+app.post('/apply', (req, res) => {
+  const {email,companyID} = req.body;
+
+  Cred.findOne({ email })
+    .then((result) => {
+      if (result) {
+        Apply.findOne({email,companyID})
+        .then((result) => {
+          if (result) {
+            return res.status(404).json({error :'Already Applied'});   
+          } else {
+            const newData = new Apply(req.body);
+            newData.save()
+              .then(() => {
+                res.status(201).json({ success: 'Application submitted successfully' });
+              })
+              .catch((error) => {
+                res.status(500).json({ error: 'Failed to save application' });
+                console.log(error)
+              });
+          }
+
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          res.status(500).json({error:'Error inserting data'});
+        });
+      } else {
+        return res.status(404).json({error:'Please login first'});
+      }
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      return res.status(500).json({error:'Error verifying data'});
+    });
+
+
+});
+
+
 
 
 

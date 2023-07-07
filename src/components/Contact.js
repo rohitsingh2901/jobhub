@@ -37,8 +37,8 @@ const Contact = (props) => {
     <div className='w-100 h-100' id='contactDiv'>
 
         <div class="container ">
-        <h1 class="font-extrabold text-center text-6xl pt-8">Contact Us</h1>
-        <hr class="my-16" />
+        <h1 class="font-extrabold text-center text-6xl pt-12">Contact Us</h1>
+        <hr class="my-12" />
       </div>
 
       <div id="contact">

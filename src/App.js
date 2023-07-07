@@ -8,6 +8,8 @@ import SingleJob from "./components/SingleJob";
 import Services from "./components/Services";
 import Alert from "./components/Alert";
 import { useState } from "react";
+import About from "./components/About";
+
 
 function App() {
 
@@ -38,13 +40,16 @@ function App() {
           <Route path="/contact" element={<Contact alert={{msg,typ,alert}}/>}/>
       </Routes>
       <Routes>
-          <Route path="/jobs" Component={Jobs}/>
+          <Route path="/jobs" element={<Jobs alert={{msg,typ,alert}} />}/>
       </Routes>
       <Routes>
           <Route path="/jobs/:id" Component={SingleJob}/>
       </Routes>
       <Routes>
           <Route path="/services" Component={Services}/>
+      </Routes>
+      <Routes>
+          <Route path="/about" Component={About}/>
       </Routes>
       
     </Router>

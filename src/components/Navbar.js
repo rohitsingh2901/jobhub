@@ -50,11 +50,11 @@ const Navbar = () => {
             >
           </li>
           <li class="nav-item">
-            <a
+            <Link
               class="nav-link text-light font-weight-bolder"
               onclick="myFunction(this)"
-              href="#testimonials"
-              >About</a
+              to="/about"
+              >About</Link
             >
           </li>
           <li class="nav-item">

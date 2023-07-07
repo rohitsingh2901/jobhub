@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
-    <div className=" container mt-6">
+    <div className=" container pt-12">
       <h1 className="text-center font-black text-6xl">Our Services</h1>
+      <hr class="my-12" />
+    
       <h4 className="font-bold mt-16">Products & Services</h4>
       <p className="font-medium mt-4">
       At <Link to="/">JobHub</Link>, we offer a range of comprehensive services designed to connect job seekers with their ideal employment opportunities.

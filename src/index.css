@@ -594,15 +594,15 @@ form.search::after {
 #contactDiv::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -20px;
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url(https://img.freepik.com/free-photo/top-view-blue-monday-concept-composition-with-telephone_23-2149139103.jpg?w=1380&t=st=1688597097~exp=1688597697~hmac=79c3b1007ccd38e7a4bb12617ce7a7ff50070d880181e87347b037f8f96a374a);
+  background-image: url(https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=1380&t=st=1688723469~exp=1688724069~hmac=13fc3d92cfdf054bc1baa677351bfd41451860b08853a5cbfa9b794b647bb080);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  opacity: 0.2;
+  opacity: 1;
   z-index: -1;
 }
 
