@@ -16,7 +16,7 @@ const ApplyForm = (props) => {
                     <form id="form" onSubmit={(e)=>{
                       console.log(document.getElementById('inputGroupFile01').value)
                       if(document.getElementById('inputGroupFile01').value){
-                        props.handleApplyForm(e,data.jobs.at(props.id - 1).id,data.jobs.at(props.id - 1).name)
+                        props.handleApplyForm(e,data[0].jobs.at(props.id - 1).id,data[0].jobs.at(props.id - 1).name)
                       }
                       else{
                         document.getElementById('inputGroupFile01').reportValidity();
@@ -28,9 +28,9 @@ const ApplyForm = (props) => {
                               class="modal-title font-bold"
                               id="exampleModalLongTitle"
                             >
-                              Applying for {data.jobs.at(props.id - 1).name}
+                              Applying for {data[0].jobs.at(props.id - 1).name}
                             </h5>
-                            <small>{data.jobs.at(props.id - 1).company}</small>
+                            <small>{data[0].jobs.at(props.id - 1).company}</small>
                           </div>
                           <button
                             type="button"

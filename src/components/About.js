@@ -207,13 +207,6 @@ const About = () => {
             
           </div>
 
-
-
-
-
-        
-
-
         <OwlCarousel
           className="flex owl-carousel owl-theme"
           items="3"

@@ -12,7 +12,7 @@ const Jobs = (props) => {
   const [file, setfile] = useState(null);
   const [file2, setfile2] = useState(null);
   const [filter, setfilter] = useState(null);
-  const [len, setlen] = useState(data.jobs.length);
+  const [len, setlen] = useState(data[0].jobs.length);
   // const [inputchecked, setinputchecked] = useState({})
   const [inputchecked, setinputchecked] = useState(null);
   const [inputchecked1, setinputchecked1] = useState(null);
@@ -54,7 +54,7 @@ const Jobs = (props) => {
     window.scrollTo(0, 0);
   };
 
-  const renderData = data.jobs.slice(
+  const renderData = data[0].jobs.slice(
     currentPage * itemsPerPage,
     (currentPage + 1) * itemsPerPage
   );
@@ -151,7 +151,7 @@ const Jobs = (props) => {
     const text144 = options3[4].value;
     const text155 = options3[5].value;
 
-    const filteredData = data.jobs.filter((job) => {
+    const filteredData = data[0].jobs.filter((job) => {
       if (inputchecked) {
         return (
           (inputchecked === text0
@@ -181,7 +181,7 @@ const Jobs = (props) => {
       }
     });
 
-    const filteredData1 = data.jobs.filter((job) => {
+    const filteredData1 = data[0].jobs.filter((job) => {
       if (inputchecked1) {
         return (
           (inputchecked1 === text00
@@ -214,7 +214,7 @@ const Jobs = (props) => {
       }
     });
 
-    const filteredData2 = data.jobs.filter((job) => {
+    const filteredData2 = data[0].jobs.filter((job) => {
       if (inputchecked2) {
         return (
           (inputchecked2 === text000 ? job["min-experience"] >= 0 : "") ||
@@ -228,7 +228,7 @@ const Jobs = (props) => {
         return job;
       }
     });
-    const filteredData3 = data.jobs.filter((job) => {
+    const filteredData3 = data[0].jobs.filter((job) => {
       if (inputchecked3) {
         return (
           (inputchecked3 === 0 ? job["min-ctc"] >= 0 : "") ||
@@ -247,14 +247,18 @@ const Jobs = (props) => {
 
 
     if (
-      inputchecked === null &&
-      inputchecked1 === null &&
-      inputchecked2 === null &&
-      inputchecked3 === null
+      (inputchecked === null || inputchecked === text0) &&
+      (inputchecked1 === null || inputchecked1 === text00) &&
+      (inputchecked2 === null || inputchecked2 === text000) &&
+      (inputchecked3 === null || inputchecked3 === 0)
     ) {
       setCheckCheck(false);
-      setlen(data.jobs.length);
-    } else {
+      setlen(data[0].jobs.length);
+      setCurrentPage(currentPage);
+    } else if(((inputchecked !== text0) ||
+    (inputchecked1 !== text00) ||
+    (inputchecked2 !== text000) ||
+    (inputchecked3 !== 0)) && currentPage!==0) {
       setCheckCheck(true);
       const renderData2 = combinedResult.slice(
         currentPage * itemsPerPage,
@@ -262,7 +266,27 @@ const Jobs = (props) => {
       );
       setlen(combinedResult.length);
       setfilter(renderData2);
-      setCurrentPage(0);
+      setCurrentPage(currentPage);
+    }
+    else if(len<=5){
+      setCheckCheck(true);
+      const renderData2 = combinedResult.slice(
+        currentPage * itemsPerPage,
+        (currentPage + 1) * itemsPerPage
+      );
+      setlen(combinedResult.length);
+      setfilter(renderData2);
+      setCurrentPage(0)
+    }
+    else{
+      setCheckCheck(true);
+      const renderData2 = combinedResult.slice(
+        currentPage * itemsPerPage,
+        (currentPage + 1) * itemsPerPage
+      );
+      setlen(combinedResult.length);
+      setfilter(renderData2);
+      setCurrentPage(currentPage)
     }
   }, [inputchecked, currentPage, inputchecked1, inputchecked2,inputchecked3]);
 
@@ -312,7 +336,7 @@ const Jobs = (props) => {
   }
 
   return (
-    <div style={{"minHeight":"50vw"}}>
+    <div id="jobsDiv" style={{"minHeight":"50vw"}}>
     <div className="flex justify-center">
       <div className="col-2 flex justify-center items-start mt-24">
         <div className="">

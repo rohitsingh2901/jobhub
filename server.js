@@ -5,7 +5,10 @@ const bodyParser = require('body-parser');
 const Cred = require('./models/Credentials'); 
 const Contact_Us = require('./models/ContactUs'); 
 const Apply = require('./models/ApplyForm')
+const JobsData = require('./models/FetchJobs')
 var cors = require('cors')
+const fs = require('fs');
+
 require('./db');
 
 
@@ -118,6 +121,22 @@ app.post('/apply', (req, res) => {
 
 
 
+app.get('/jobs', async (req, res) => {
+  try {
+    const users = await JobsData.find();
+    const jsonData = JSON.stringify(users);
+    fs.writeFile('src/Jobs.json', jsonData, (err) => {
+      if (err) {
+        console.log('Error writing data to file', err);
+      }
+      console.log('Data written to file successfully');
+    });
+    res.json(users);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
 
 
 

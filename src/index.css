@@ -228,10 +228,10 @@ input::placeholder {
 #loginDiv::before{
   content: "";
   position: absolute;
-  top: -2%; 
-  left: -2%; 
-  height: 104%; 
-  width: 104%;
+  top: -3%; 
+  left: -3%; 
+  height: 106%; 
+  width: 106%;
   background-image: url(https://img.freepik.com/free-photo/gray-abstract-wireframe-technology-background_53876-101941.jpg?w=1380&t=st=1688597677~exp=1688598277~hmac=71dfdf7e34eeba23d8c1db637e70b6c2fb5a620a551a1c2c830dd4db58335854);
   background-repeat: no-repeat;
   background-position: center;
@@ -454,7 +454,7 @@ input::placeholder {
 
 .fa{
   color: rgb(169, 166, 166);
-  font-size: 15px;
+  font-size: 10px;
 }
 .pagination__button--disabled a:hover{
   cursor: not-allowed;
@@ -466,6 +466,12 @@ input::placeholder {
 }
 .view1btn{
   background-color: rgb(247, 96, 96);
+  font-weight: 600;
+  font-size: small;
+  color: black;
+}
+.view1btn:hover{
+  background-color: rgb(211, 75, 75);
   font-weight: 600;
   font-size: small;
   color: black;
@@ -482,6 +488,12 @@ input::placeholder {
 }
 .view2btn{
   background-color: rgb(59, 59, 242);
+  font-weight: 600;
+  font-size: small;
+  color: white;
+}
+.view2btn:hover{
+  background-color: rgb(45, 45, 189);
   font-weight: 600;
   font-size: small;
   color: white;
@@ -518,13 +530,6 @@ input::placeholder {
 }
 
 
-.owlCard{
-  height: 250px;
-  border: 2px solid rgb(251, 219, 219);
-  border-radius: 20px;
-  box-shadow: 10px 10px rgba(255, 0, 0, 0.030);
-  box-shadow: 3px 3px 3px rgba(245, 83, 83, 0.208);
-}
 
 .visionCard{
   border-radius: 20px;
@@ -532,13 +537,9 @@ input::placeholder {
 }
 
 .teamIMG{
-  
   border-radius: 50%;
   display: inline-block;
   box-shadow: 2px 3px 10px 2px rgba(115, 83, 245, 0.433);   
-
-
-  
 }
 
 
@@ -747,6 +748,158 @@ form.search::after {
 }
 .row.ficons a {
   margin: 0px 40px;
+}
+
+
+
+#homeHeading{
+  animation: slideInLeft 0.5s;
+}
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+#homeImgLeft{
+  border-radius: 50px;
+  border: 2px solid rgb(248, 194, 194);
+  animation: slideInLeft 0.5s;
+}
+#homeImgRight{
+  border-radius: 50px;
+  border: 2px solid rgb(248, 194, 194);
+  animation: slideInRight 0.5s;
+}
+.right{
+  animation: slideInRight 0.5s;
+}
+.left{
+  animation: slideInLeft 0.5s;
+
+}
+
+#homeTetimecard{
+  background-color: rgb(234, 234, 234);
+  padding:1px 3px;
+  border-radius: 5px;
+}
+
+
+
+.homeViewbtn{
+  background-color: rgb(59, 59, 242);
+  font-weight: 600;
+  font-size:xx-small;
+  color: white;
+  padding: 5px;
+  border-radius:5px;
+}
+.homeViewbtn:hover{
+  background-color: rgb(45, 45, 189);
+  font-weight: 600;
+  font-size:xx-small;
+  color: white;
+  padding: 5px;
+  border-radius:5px;
+}
+.homeViewbtn:focus{
+  background-color: rgb(59, 59, 242);
+  font-weight: 600;
+  font-size: xx-small;
+  color: white;
+  outline: 3px groove rgb(37, 37, 224);
+  padding: 5px;
+  border-radius:5px;
+}
+.homeViewbtn:active{
+  transform: scale(1.05);
+}
+
+.owlCard{
+  height: 250px;
+  border: 2px solid rgb(251, 219, 219);
+  border-radius: 20px;
+  box-shadow: 10px 10px rgba(255, 0, 0, 0.030);
+  box-shadow: 3px 3px 3px rgba(245, 83, 83, 0.208);
+}
+
+.HomeCompanyIMG{
+  height: 190px;
+  margin: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 2px 3px 10px 2px rgba(115, 83, 245, 0.433);  
+}
+.Hitem{
+  width: 200px; 
+  margin-right: 10px;
+}
+
+
+#HomeDiv {
+  position: relative;
+}
+
+#HomeDiv::before {
+  content: "";
+  position: absolute;
+  top: -3%; 
+  left: -2%; 
+  height: 106%; 
+  width: 104%;
+  background-image: url(/public/62186.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}
+#jobsDiv {
+  position: relative;
+}
+
+#jobsDiv::before {
+  content: "";
+  position: absolute;
+  top: -3%; 
+  left: -2%; 
+  height: 106%; 
+  width: 104%;
+  background-image: url(https://img.freepik.com/free-photo/white-paper-texture-background_23-2148171225.jpg?w=740&t=st=1688841994~exp=1688842594~hmac=6f77ab3adf0addf7888e1118c7448267ff3da66e419bb9b470d1ac7d8279b220);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 
