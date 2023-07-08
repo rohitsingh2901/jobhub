@@ -40,6 +40,7 @@ const Contact = (props) => {
   }
 
   return (
+    <div style={{"minHeight":"50vw"}}>
     <div className='w-100 h-100' id='contactDiv'>
 
         <div class="container ">
@@ -135,6 +136,7 @@ const Contact = (props) => {
 
 
 
+    </div>
     </div>
   )
 }

@@ -7,7 +7,8 @@ const Services = () => {
     window.scrollTo(0, 0);
   }, [])
   return (
-    <div className=" container pt-12">
+    <div id="servicesDiv" style={{"minHeight":"50vw"}}>
+    <div  className=" container pt-12">
       <h1 className="text-center font-black text-6xl">Our Services</h1>
       <hr class="my-12" />
     
@@ -39,6 +40,7 @@ const Services = () => {
         <p className="font-medium text-gray-700 text-sm mt-8">
         At <Link to="/">JobHub</Link>, our goal is to empower job seekers by providing them with the tools and resources they need to find their dream job. Whether you're a recent graduate, an experienced professional, or someone looking for a career change, we are here to help you navigate the job market and connect with meaningful employment opportunities.
         </p>
+    </div>
     </div>
   );
 };

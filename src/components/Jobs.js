@@ -312,6 +312,7 @@ const Jobs = (props) => {
   }
 
   return (
+    <div style={{"minHeight":"50vw"}}>
     <div className="flex justify-center">
       <div className="col-2 flex justify-center items-start mt-24">
         <div className="">
@@ -557,7 +558,7 @@ const Jobs = (props) => {
                 </div>
 
                 <ApplyForm handleApplyForm={handleApplyForm} element={element} id={id} cred={cred} handleInputChange={handleInputChange} handdleFile={handdleFile} handdleFile2={handdleFile2} handleFormReset={handleFormReset} />
-                
+
               </div>
             ))}
 
@@ -582,6 +583,7 @@ const Jobs = (props) => {
           forcePage={currentPage}
         />
       </div>
+    </div>
     </div>
   );
 };

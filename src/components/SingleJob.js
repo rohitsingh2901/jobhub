@@ -62,10 +62,13 @@ const SingleJob = (props) => {
       .then(() => {
         // alert("Copied");
         // TODO
+        props.alert.alert("Link copied successfully",'success')
       })
       .catch(() => {
         // alert("some error occured");
         // TODO
+        props.alert.alert("Some error occurred",'danger')
+
       });
   };
 
@@ -119,6 +122,7 @@ const SingleJob = (props) => {
 
 
   return (
+    <div style={{"minHeight":"50vw"}}>
     <div className="container my-32">
       <div class="card w-100" id="singlemaincard">
         <div class="card-body">
@@ -283,6 +287,7 @@ const SingleJob = (props) => {
       </div>
 
       <ApplyForm handleApplyForm={handleApplyForm}  id={id} cred={cred} handleInputChange={handleInputChange} handdleFile={handdleFile} handdleFile2={handdleFile2} handleFormReset={handleFormReset} />
+    </div>
     </div>
   );
 };

@@ -8,11 +8,11 @@ const Navbar = () => {
   return (
     <>
       <nav class="navbar navbar-expand-lg anim" id="navbar">
-      <a class="navbar-brand" href="/">
+      <Link class="navbar-brand" to="/">
         <div class="enlarge-image">
           <img style={{"height":"4vw"}} src="/job.png" alt="logo" />
         </div>
-      </a>
+      </Link>
       <button
         class="navbar-toggler"
         type="button"
@@ -27,11 +27,11 @@ const Navbar = () => {
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a
+            <Link
               class="nav-link text-light font-weight-bolder"
               onclick="myFunction(this)"
-              href="/"
-              >Home</a
+              to="/"
+              >Home</Link
             >
           </li>
           <li class="nav-item">

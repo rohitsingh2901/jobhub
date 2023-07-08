@@ -10,6 +10,7 @@ import Alert from "./components/Alert";
 import { useState } from "react";
 import About from "./components/About";
 import Footer from "./components/Footer";
+import Home from "./components/Home";
 
 
 function App() {
@@ -51,6 +52,9 @@ function App() {
       </Routes>
       <Routes>
           <Route path="/about" Component={About}/>
+      </Routes>
+      <Routes>
+          <Route path="/" Component={Home}/>
       </Routes>
 
 

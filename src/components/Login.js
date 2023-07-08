@@ -36,6 +36,7 @@ const Login = (props) => {
 
   };
   return (
+    <div style={{"minHeight":"50vw"}}>
     <div id="loginDiv">
       <div className="container pt-32" id="containerlogin">
         <h1 className="font-extrabold">
@@ -96,6 +97,7 @@ const Login = (props) => {
   </div>
 </div>
       </div>
+    </div>
     </div>
   );
 };

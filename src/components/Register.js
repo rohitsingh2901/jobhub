@@ -45,6 +45,7 @@ const Register = (props) => {
 
 
   return (
+    <div style={{"minHeight":"50vw"}}>
     <div id="registerDiv">
       <div className="container pt-32" id="containerRegister">
         <h1 className="font-extrabold">
@@ -135,6 +136,7 @@ const Register = (props) => {
   </div>
 </div>
       </div>
+    </div>
     </div>
   )
 }

@@ -8,6 +8,7 @@ const About = () => {
     window.scrollTo(0, 0);
   }, [])
   return (
+    <div style={{"minHeight":"50vw"}}>
     <div className="w-100 h-100" id="aboutDiv">
       <div class="container ">
         <h1 class="font-extrabold text-center text-6xl pt-12">About Us</h1>
@@ -261,6 +262,7 @@ const About = () => {
         </div>
         
       </div>
+    </div>
     </div>
   );
 };
