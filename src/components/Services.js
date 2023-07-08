@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+
 const Services = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   return (
     <div className=" container pt-12">
       <h1 className="text-center font-black text-6xl">Our Services</h1>

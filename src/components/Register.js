@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const Register = (props) => {
@@ -8,7 +8,9 @@ const Register = (props) => {
   const [password, setPassword] = useState('');
   const [fname, setFname] = useState('');
   const [lname, setLname] = useState('');
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   const handleSaveCredentials = (e) => {
     e.preventDefault()
     const credentials = {

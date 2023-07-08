@@ -1,10 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 const Contact = (props) => {
   const [name, setName] = useState('')
   const [email, setemail] = useState('')
   const [message, setMessage] = useState('')
+
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
 
   const handleMessage = (e)=>{
     e.preventDefault();

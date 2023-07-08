@@ -166,10 +166,10 @@ code {
 #registerDiv::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  top: -1%; 
+  left: -1%; 
+  height: 102%; 
+  width: 102%;
   background-image: url(https://img.freepik.com/free-vector/recruitment-agency-searching-job-applicants_1262-19873.jpg?w=1380&t=st=1688273587~exp=1688274187~hmac=d4468ba83efb59a2e96e946899f4acccc76fb29d7f76c3217cea7c2779bdb781);
   background-repeat: no-repeat;
   background-position: center;
@@ -228,10 +228,10 @@ input::placeholder {
 #loginDiv::before{
   content: "";
   position: absolute;
-  top: -20px;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  top: -2%; 
+  left: -2%; 
+  height: 104%; 
+  width: 104%;
   background-image: url(https://img.freepik.com/free-photo/gray-abstract-wireframe-technology-background_53876-101941.jpg?w=1380&t=st=1688597677~exp=1688598277~hmac=71dfdf7e34eeba23d8c1db637e70b6c2fb5a620a551a1c2c830dd4db58335854);
   background-repeat: no-repeat;
   background-position: center;
@@ -518,6 +518,29 @@ input::placeholder {
 }
 
 
+.owlCard{
+  height: 250px;
+  border: 2px solid rgb(251, 219, 219);
+  border-radius: 20px;
+  box-shadow: 10px 10px rgba(255, 0, 0, 0.030);
+  box-shadow: 3px 3px 3px rgba(245, 83, 83, 0.208);
+}
+
+.visionCard{
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(245, 83, 83, 0.247);   
+}
+
+.teamIMG{
+  
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 2px 3px 10px 2px rgba(115, 83, 245, 0.433);   
+
+
+  
+}
+
 
 
 
@@ -589,15 +612,16 @@ form.search::after {
   position: relative;
   height: 100vh;
   width: 100vw;
+  
 }
 
 #contactDiv::before {
   content: "";
   position: absolute;
-  top: -20px;
-  left: 0;
-  height: 100%;
-  width: 100%;
+  top: -2%; 
+  left: -2%; 
+  height: 104%; 
+  width: 104%;
   background-image: url(https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=1380&t=st=1688723469~exp=1688724069~hmac=13fc3d92cfdf054bc1baa677351bfd41451860b08853a5cbfa9b794b647bb080);
   background-repeat: no-repeat;
   background-position: center;
@@ -605,4 +629,103 @@ form.search::after {
   opacity: 1;
   z-index: -1;
 }
+
+#aboutDiv {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+#aboutDiv::before {
+  content: "";
+  position: absolute;
+  top: -1%; 
+  left: -1%; 
+  height: 102%; 
+  width: 102%;
+  background-image: url(/public/rm222batch2-mind-03.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+.footer {
+  /* animation: color 20s linear infinite; */
+  background: linear-gradient(to left, #6c2d2d, #1a1339);
+  animation: slideInRight 0.5s;
+  padding: 30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align: center;
+}
+
+.footer .row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: rgb(129, 129, 129);
+  font-size: 0.8em;
+}
+
+.footer .row a {
+  text-decoration: none;
+  color: rgb(134, 132, 132);
+  transition: 0.5s;
+}
+
+.footer .row a:hover {
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.footer .row ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footer .row ul li {
+  display: inline-block;
+  margin: 0px 30px;
+}
+
+.footer .row a i {
+  font-size: 2em;
+  margin: 0% 1%;
+}
+
+@media (max-width:720px) {
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+  }
+
+  .footer .row a i {
+    margin: 0% 3%;
+  }
+}
+.row.ficons a {
+  margin: 0px 40px;
+}
+
+
 

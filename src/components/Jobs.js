@@ -3,6 +3,7 @@ import data from "../Jobs.json";
 import ReactPaginate from "react-paginate";
 import { Link } from "react-router-dom";
 import Select from "react-select";
+import ApplyForm from "./ApplyForm";
 
 const Jobs = (props) => {
   const itemsPerPage = 5;
@@ -23,9 +24,9 @@ const Jobs = (props) => {
   "email": '',
   "phone": '',
   "coverletter": '',
-  "resume": { type: null, required: true },
-  "document": { type: null },
-  "companyID" : -1,
+  "resume": '',
+  "document": '',
+  "companyID" : 0,
   "companyName" : ''
 }
 
@@ -39,7 +40,9 @@ const Jobs = (props) => {
   };
 
 
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
 
 
 
@@ -62,6 +65,7 @@ const Jobs = (props) => {
     }
     setfile(event.target.files[0]);
     document.getElementById("fileLabel").innerHTML = event.target.files[0].name;
+    setCred((prevFormData) => ({ ...prevFormData, "resume": event.target.files[0].name }));
   };
 
 
@@ -73,19 +77,10 @@ const Jobs = (props) => {
     setfile2(event.target.files[0]);
     document.getElementById("fileLabel2").innerHTML =
       event.target.files[0].name;
+      setCred((prevFormData) => ({ ...prevFormData, "document": event.target.files[0].name }));
   };
   
-  useEffect(() => {
-    if(file){
-      setCred((prevFormData) => ({ ...prevFormData, "resume": file.name }));
-    }
-    if(file2!==null){
-      setCred((prevFormData) => ({ ...prevFormData, "document": file2.name }));
-    }
-    else{
-      setCred((prevFormData) => ({ ...prevFormData, "document": '' }));
-    }
-  }, [file,file2])
+
   
   
   
@@ -281,7 +276,6 @@ const Jobs = (props) => {
     cred.companyID=id;
     cred.companyName+=name;
 
-
     
     fetch('http://localhost:5000/apply', {
       method: "POST",
@@ -302,13 +296,18 @@ const Jobs = (props) => {
       console.log(err)
       props.alert.alert("Some error occured",'danger')
     })
-    .finally(()=>{
-      setCred(defaultValue)
-      document.getElementById("fileLabel").innerHTML = 'Choose file';
-      document.getElementById("fileLabel2").innerHTML = 'Choose file';
-    })
     
 
+
+  }
+  const handleFormReset = ()=>{
+    setCred(defaultValue)
+    setfile(null)
+    setfile2(null)
+    document.getElementById('inputGroupFile01').value=null;
+    document.getElementById('inputGroupFile02').value=null;
+    document.getElementById("fileLabel").innerHTML = 'Choose file'
+    document.getElementById("fileLabel2").innerHTML = 'Choose file'
 
   }
 
@@ -463,218 +462,7 @@ const Jobs = (props) => {
                   </div>
                 </div>
 
-                <div
-                  class="modal fade bd-example-modal-lg"
-                  id="exampleModalLong"
-                  tabindex="-1"
-                  role="dialog"
-                  aria-labelledby="exampleModalLongTitle"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                    <form id="form" onSubmit={(e)=>handleApplyForm(e,data.jobs.at(id - 1).id,data.jobs.at(id - 1).name)}>
-                        <div class="modal-header bg-gray-100">
-                          <div>
-                            <h5
-                              class="modal-title font-bold"
-                              id="exampleModalLongTitle"
-                            >
-                              Applying for {data.jobs.at(id - 1).name}
-                            </h5>
-                            <small>{data.jobs.at(id - 1).company}</small>
-                          </div>
-                          <button
-                            type="button"
-                            class="close"
-                            data-dismiss="modal"
-                            aria-label="Close"
-                          >
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <h5 className="font-medium container mb-3">
-                            Contact Information
-                          </h5>
-                          <div id="fnln">
-                            <div className="form-group my-2 col-6">
-                              <label
-                                className="font-medium text-gray-700"
-                                htmlfor="fn"
-                              >
-                                First Name
-                              </label>
-                              <input
-                                required
-                                name="fname"
-                                value={cred.fname}
-                                onChange={handleInputChange}
-                                type="text"
-                                className="form-control"
-                                id="fn"
-                                placeholder="John"
-                              />
-                            </div>
-                            <div className="form-group my-2 col-6">
-                              <label
-                                className="font-medium text-gray-700"
-                                htmlfor="ln"
-                              >
-                                Last Name
-                              </label>
-                              <input
-                              name="lname"
-                              value={cred.lname}
-                              onChange={handleInputChange}
-                                required
-                                type="text"
-                                className="form-control"
-                                id="ln"
-                                placeholder="Doe"
-                              />
-                            </div>
-                          </div>
-
-                          <div id="fnln">
-                            <div className="form-group my-2 col-6">
-                              <label
-                                className="font-medium text-gray-700"
-                                htmlfor="email"
-                              >
-                                Email address
-                              </label>
-                              <input
-                              name="email"
-                              value={cred.email}
-                              onChange={handleInputChange}
-                                required
-                                type="email"
-                                className="form-control"
-                                id="email"
-                                aria-describedby="emailHelp"
-                                placeholder="john@example.cpm"
-                              />
-                            </div>
-
-                            <div className="form-group my-2 col-6">
-                              <label
-                                className="font-medium text-gray-700"
-                                htmlfor="phn"
-                              >
-                                Phone
-                              </label>
-                              <input
-                              name="phone"
-                              value={cred.phone}
-                              onChange={handleInputChange}
-                                required
-                                type="tel"
-                                className="form-control"
-                                id="phn"
-                                placeholder="9999999999"
-                              />
-                            </div>
-                          </div>
-                          <div className="form-group mt-5 col-12">
-                            <h5 className="font-medium mb-3">Cover Letter</h5>
-                            <label
-                              className="font-medium text-gray-700"
-                              htmlfor="exampleInputName1"
-                            >
-                              Why should you be hired for this role?
-                            </label>
-                            <textarea
-                              required
-                              name="coverletter"
-                              value={cred.coverletter}
-                              onChange={handleInputChange}
-                              type="text"
-                              className="form-control"
-                              id="exampleInputName1"
-                              placeholder="Mention in detail what relevant skill or past experience you have for this job. What excites you about this job? Why would you be a good fit?"
-                              rows={4}
-                            />
-                          </div>
-
-                          <div className="form-group mt-5 col-12">
-                            <h5 className="font-medium mb-3">Upload Resume</h5>
-                            <label
-                              className="font-medium text-gray-700"
-                              htmlfor="exampleInputName1"
-                            >
-                              Kindly provide an latest version of your resume
-                              for our records.
-                            </label>
-                            <div class="input-group mb-3">
-                              
-                              <div class="custom-file">
-                                <input
-                                required
-                                  accept=".pdf,.doc,.docx"
-                                  type="file"
-                                  class="custom-file-input"
-                                  id="inputGroupFile01"
-                                  onChange={handdleFile}
-                                />
-                                <label
-                                  id="fileLabel"
-                                  class="custom-file-label"
-                                  for="inputGroupFile01"
-                                >
-                                  Choose file
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="form-group mt-5 col-12">
-                            <h5 className="font-medium mb-3">
-                              Upload Documents
-                            </h5>
-                            <label
-                              className="font-medium text-gray-700"
-                              htmlfor="exampleInputName1"
-                            >
-                              Please provide any relevant certificates,
-                              hackathon wins, or awards related to this job?
-                            </label>
-                            <div class="input-group mb-3">
-                              
-                              <div class="custom-file">
-                                <input
-                                  accept=".pdf,.doc,.docx,.img,.jpg"
-                                  type="file"
-                                  class="custom-file-input"
-                                  id="inputGroupFile02"
-                                  onChange={handdleFile2}
-                                />
-                                <label
-                                  id="fileLabel2"
-                                  class="custom-file-label"
-                                  for="inputGroupFile01"
-                                >
-                                  Choose file
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="my-1">
-                            <small className="form-text text-muted"></small>
-                          </div>
-                          <div></div>
-                        </div>
-
-                        <div class="modal-footer bg-gray-100">
-                          <button type="submit" className="btn mt-2 view2btn">
-                            Submit application
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
+                <ApplyForm handleApplyForm={handleApplyForm} element={element} id={id} cred={cred} handleInputChange={handleInputChange} handdleFile={handdleFile} handdleFile2={handdleFile2} handleFormReset={handleFormReset} />
               </div>
             ))
           : filter.map((element) => (
@@ -768,218 +556,8 @@ const Jobs = (props) => {
                   </div>
                 </div>
 
-                <div
-                  class="modal fade bd-example-modal-lg"
-                  id="exampleModalLong"
-                  tabindex="-1"
-                  role="dialog"
-                  aria-labelledby="exampleModalLongTitle"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                    <form id="form" onSubmit={(e)=>handleApplyForm(e,data.jobs.at(id - 1).id,data.jobs.at(id - 1).name)}>
-                        <div class="modal-header bg-gray-100">
-                          <div>
-                            <h5
-                              class="modal-title font-bold"
-                              id="exampleModalLongTitle"
-                            >
-                              Applying for {data.jobs.at(id - 1).name}
-                            </h5>
-                            <small>{data.jobs.at(id - 1).company}</small>
-                          </div>
-                          <button
-                            type="button"
-                            class="close"
-                            data-dismiss="modal"
-                            aria-label="Close"
-                          >
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                          <h5 className="font-medium container mb-3">
-                            Contact Information
-                          </h5>
-                          <div id="fnln">
-                            <div className="form-group my-2 col-6">
-                              <label
-                                className="font-medium text-gray-700"
-                                htmlfor="fn"
-                              >
-                                First Name
-                              </label>
-                              <input
-                                required
-                                name="fname"
-                                value={cred.fname}
-                                onChange={handleInputChange}
-                                type="text"
-                                className="form-control"
-                                id="fn"
-                                placeholder="John"
-                              />
-                            </div>
-                            <div className="form-group my-2 col-6">
-                              <label
-                                className="font-medium text-gray-700"
-                                htmlfor="ln"
-                              >
-                                Last Name
-                              </label>
-                              <input
-                              name="lname"
-                              value={cred.lname}
-                              onChange={handleInputChange}
-                                required
-                                type="text"
-                                className="form-control"
-                                id="ln"
-                                placeholder="Doe"
-                              />
-                            </div>
-                          </div>
-
-                          <div id="fnln">
-                            <div className="form-group my-2 col-6">
-                              <label
-                                className="font-medium text-gray-700"
-                                htmlfor="email"
-                              >
-                                Email address
-                              </label>
-                              <input
-                              name="email"
-                              value={cred.email}
-                              onChange={handleInputChange}
-                                required
-                                type="email"
-                                className="form-control"
-                                id="email"
-                                aria-describedby="emailHelp"
-                                placeholder="john@example.cpm"
-                              />
-                            </div>
-
-                            <div className="form-group my-2 col-6">
-                              <label
-                                className="font-medium text-gray-700"
-                                htmlfor="phn"
-                              >
-                                Phone
-                              </label>
-                              <input
-                              name="phone"
-                              value={cred.phone}
-                              onChange={handleInputChange}
-                                required
-                                type="tel"
-                                className="form-control"
-                                id="phn"
-                                placeholder="9999999999"
-                              />
-                            </div>
-                          </div>
-                          <div className="form-group mt-5 col-12">
-                            <h5 className="font-medium mb-3">Cover Letter</h5>
-                            <label
-                              className="font-medium text-gray-700"
-                              htmlfor="exampleInputName1"
-                            >
-                              Why should you be hired for this role?
-                            </label>
-                            <textarea
-                              required
-                              name="coverletter"
-                              value={cred.coverletter}
-                              onChange={handleInputChange}
-                              type="text"
-                              className="form-control"
-                              id="exampleInputName1"
-                              placeholder="Mention in detail what relevant skill or past experience you have for this job. What excites you about this job? Why would you be a good fit?"
-                              rows={4}
-                            />
-                          </div>
-
-                          <div className="form-group mt-5 col-12">
-                            <h5 className="font-medium mb-3">Upload Resume</h5>
-                            <label
-                              className="font-medium text-gray-700"
-                              htmlfor="exampleInputName1"
-                            >
-                              Kindly provide an latest version of your resume
-                              for our records.
-                            </label>
-                            <div class="input-group mb-3">
-                              
-                              <div class="custom-file">
-                                <input
-                                required
-                                  accept=".pdf,.doc,.docx"
-                                  type="file"
-                                  class="custom-file-input"
-                                  id="inputGroupFile01"
-                                  onChange={handdleFile}
-                                />
-                                <label
-                                  id="fileLabel"
-                                  class="custom-file-label"
-                                  for="inputGroupFile01"
-                                >
-                                  Choose file
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="form-group mt-5 col-12">
-                            <h5 className="font-medium mb-3">
-                              Upload Documents
-                            </h5>
-                            <label
-                              className="font-medium text-gray-700"
-                              htmlfor="exampleInputName1"
-                            >
-                              Please provide any relevant certificates,
-                              hackathon wins, or awards related to this job?
-                            </label>
-                            <div class="input-group mb-3">
-                              
-                              <div class="custom-file">
-                                <input
-                                  accept=".pdf,.doc,.docx,.img,.jpg"
-                                  type="file"
-                                  class="custom-file-input"
-                                  id="inputGroupFile02"
-                                  onChange={handdleFile2}
-                                />
-                                <label
-                                  id="fileLabel2"
-                                  class="custom-file-label"
-                                  for="inputGroupFile01"
-                                >
-                                  Choose file
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div className="my-1">
-                            <small className="form-text text-muted"></small>
-                          </div>
-                          <div></div>
-                        </div>
-
-                        <div class="modal-footer bg-gray-100">
-                          <button type="submit" className="btn mt-2 view2btn">
-                            Submit application
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
+                <ApplyForm handleApplyForm={handleApplyForm} element={element} id={id} cred={cred} handleInputChange={handleInputChange} handdleFile={handdleFile} handdleFile2={handdleFile2} handleFormReset={handleFormReset} />
+                
               </div>
             ))}
 

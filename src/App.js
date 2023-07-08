@@ -9,6 +9,7 @@ import Services from "./components/Services";
 import Alert from "./components/Alert";
 import { useState } from "react";
 import About from "./components/About";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -43,7 +44,7 @@ function App() {
           <Route path="/jobs" element={<Jobs alert={{msg,typ,alert}} />}/>
       </Routes>
       <Routes>
-          <Route path="/jobs/:id" Component={SingleJob}/>
+          <Route path="/jobs/:id" element={<SingleJob alert={{msg,typ,alert}} />}/>
       </Routes>
       <Routes>
           <Route path="/services" Component={Services}/>
@@ -51,7 +52,10 @@ function App() {
       <Routes>
           <Route path="/about" Component={About}/>
       </Routes>
-      
+
+
+
+      <Footer/>
     </Router>
     </>
   );

@@ -6,8 +6,8 @@ const dataSchema = new mongoose.Schema({
   "email": String,
   "phone": String,
   "coverletter": String,
-  "resume": { type: String, required: true },
-  "document": { type: String },
+  "resume": String,
+  "document": String,
   "companyID" : Number,
   "companyName" : String
 });
