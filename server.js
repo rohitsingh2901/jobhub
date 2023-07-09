@@ -8,8 +8,10 @@ const Apply = require('./models/ApplyForm')
 const JobsData = require('./models/FetchJobs')
 var cors = require('cors')
 const fs = require('fs');
-
+const bcrypt = require('bcryptjs');
 require('./db');
+
+
 
 
 const app = express();
@@ -22,12 +24,17 @@ app.use(bodyParser.json());
 app.post('/register', (req, res) => {
 
   const {email} = req.body;
+
   Cred.findOne({email})
   .then((result) => {
     if (result) {
       return res.status(404).json({error :'Email already exists'});   
     } else {
-      const newData = new Cred(req.body);
+      const salt =  bcrypt.genSaltSync(10);
+      const hash =  bcrypt.hashSync(req.body.password, salt);
+      const user = {...req.body,"password":hash}
+      console.log(user);
+      const newData = new Cred(user);
       newData.save()
         .then(() => {
           res.status(201).json({ message: 'Data saved successfully' });
@@ -46,21 +53,27 @@ app.post('/register', (req, res) => {
 
 });
 
-app.post('/verify', (req, res) => {
+app.post('/verify',(req, res) => {
   const { email, password } = req.body;
-
-  Cred.findOne({ email, password })
-    .then((result) => {
+  Cred.findOne({ email})
+    .then(async(result) => {
       if (result) {
-        res.status(200).json({success : 'Data exists'});
+        const passCompare  = await bcrypt.compare(password,result.password);
+        if(!passCompare){
+          return res.status(404).json({error:'Invalid credentials'});
+        }
+        else{
+          return res.status(200).json({success : 'Data exists'});
+        }
       } else {
-        res.status(404).json({error:'Data not found'});
+        return res.status(404).json({error:'Data not found'});
       }
     })
     .catch((error) => {
       console.error('Error:', error);
       res.status(500).json({error:'Error verifying data'});
     });
+    
   
 });
 

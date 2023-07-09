@@ -7,6 +7,7 @@ const Login = (props) => {
   const [password, setPassword] = useState('');
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = 'JobHub - Login'
   }, [])
 
   const handleVerifyCredentials = (e) => {

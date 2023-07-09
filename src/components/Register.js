@@ -10,6 +10,7 @@ const Register = (props) => {
   const [lname, setLname] = useState('');
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = 'JobHub - Signup'
   }, [])
   const handleSaveCredentials = (e) => {
     e.preventDefault()

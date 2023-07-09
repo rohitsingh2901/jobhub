@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Services = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = 'JobHub - Services'
   }, [])
   return (
     <div id="servicesDiv" style={{"minHeight":"50vw"}}>

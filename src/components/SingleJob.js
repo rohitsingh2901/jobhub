@@ -52,6 +52,7 @@ const SingleJob = (props) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = 'JobHub - Apply Now'
   }, [])
   
 

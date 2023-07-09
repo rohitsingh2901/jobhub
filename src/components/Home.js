@@ -9,6 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = 'JobHub - Home'
     const fetchUsers = async () => {
       try {
         const response = await fetch('http://localhost:5000/jobs');

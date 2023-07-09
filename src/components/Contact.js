@@ -9,6 +9,7 @@ const Contact = (props) => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = 'JobHub - Contact'
   }, [])
 
 

@@ -6,6 +6,7 @@ import "owl.carousel/dist/assets/owl.theme.default.min.css";
 const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    document.title = 'JobHub - About'
   }, [])
   return (
     <div style={{"minHeight":"50vw"}}>
