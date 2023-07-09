@@ -207,7 +207,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/'+Data[0].jobs[0].image}
+                    src={Data[0].jobs[0].image.slice(1,)}
                     alt="Logo"
                   />
                 </div>
@@ -284,7 +284,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/'+Data[0].jobs[5].image}
+                    src={Data[0].jobs[5].image.slice(1,)}
                     alt="Logo"
                   />
                 </div>
@@ -361,7 +361,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/'+Data[0].jobs[11].image}
+                    src={Data[0].jobs[11].image.slice(1,)}
                     alt="Logo"
                   />
                 </div>
@@ -438,7 +438,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/'+Data[0].jobs[19].image}
+                    src={Data[0].jobs[19].image.slice(1,)}
                     alt="Logo"
                   />
                 </div>
@@ -515,7 +515,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/'+Data[0].jobs[15].image}
+                    src={Data[0].jobs[15].image.slice(1,)}
                     alt="Logo"
                   />
                 </div>
@@ -592,7 +592,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/'+Data[0].jobs[17].image}
+                    src={Data[0].jobs[17].image.slice(1,)}
                     alt="Logo"
                   />
                 </div>
@@ -669,7 +669,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/'+Data[0].jobs[7].image}
+                    src={Data[0].jobs[7].image.slice(1,)}
                     alt="Logo"
                   />
                 </div>
@@ -746,7 +746,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/'+Data[0].jobs[14].image}
+                    src={Data[0].jobs[14].image.slice(1,)}
                     alt="Logo"
                   />
                 </div>
@@ -823,7 +823,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/'+Data[0].jobs[8].image}
+                    src={Data[0].jobs[8].image.slice(1,)}
                     alt="Logo"
                   />
                 </div>

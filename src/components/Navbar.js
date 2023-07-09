@@ -28,7 +28,7 @@ const Navbar = () => {
       <nav class="navbar navbar-expand-lg anim" id="navbar">
       <Link class="navbar-brand" to="/">
         <div class="enlarge-image">
-          <img  src="/job.png" alt="logo" />
+          <img  src="job.png" alt="logo" />
         </div>
       </Link>
       <button
