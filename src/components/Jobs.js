@@ -550,7 +550,7 @@ const Jobs = (props) => {
                         </div>
                         <hr></hr>
                         <div className="flex justify-between">
-                          <Link to={`/jobs/${element.id}`}>
+                          <Link to={`/jobhub/jobs/${element.id}`}>
                             <button className="btn btn-sm view1btn">
                               View details
                             </button>

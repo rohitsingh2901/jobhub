@@ -197,7 +197,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -279,7 +279,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -361,7 +361,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -443,7 +443,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -525,7 +525,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -607,7 +607,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -689,7 +689,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -771,7 +771,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -853,7 +853,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
