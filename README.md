@@ -18,7 +18,6 @@ JobHub is a job portal application that allows users to browse and apply for var
 - bcryptjs: ^2.4.3
 - body-parser: ^1.20.2
 - cors: ^2.8.5
-- express-fileupload: ^1.4.0
 - jquery: ^3.7.0
 - mongodb: 3.7
 - mongoose: ^7.3.1
