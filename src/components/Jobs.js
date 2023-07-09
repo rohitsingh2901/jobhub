@@ -456,7 +456,7 @@ const Jobs = (props) => {
                         </div>
                         <hr></hr>
                         <div className="flex justify-between">
-                          <Link to={`jobhub/#/jobs/${element.id}`}>
+                          <Link to={`/jobs/${element.id}`}>
                             <button className="btn btn-sm view1btn">
                               View details
                             </button>
@@ -481,7 +481,7 @@ const Jobs = (props) => {
                           height: "60px",
                           marginTop: "5px",
                         }}
-                        src={element.image.slice(2,)}
+                        src={element.image.slice(1,)}
                         alt="Logo"
                       />
                     </div>
@@ -575,7 +575,7 @@ const Jobs = (props) => {
                           height: "60px",
                           marginTop: "5px",
                         }}
-                        src={element.image.slice(2,)}
+                        src={element.image.slice(1,)}
                         alt="Logo"
                       />
                     </div>

@@ -58,9 +58,10 @@ const SingleJob = (props) => {
 
   const copyToClipboard = () => {
     const text = textRef.current.innerHTML;
-    console.log(text)
+    let modifiedUrl = text.replace("//jobs/", `/jobhub/#/jobs/`);
+    console.log(modifiedUrl)
     navigator.clipboard
-      .writeText(text)
+      .writeText(modifiedUrl)
       .then(() => {
         // alert("Copied");
         // TODO
@@ -214,7 +215,7 @@ const SingleJob = (props) => {
               <p>{data[0].jobs.at(id - 1).applicants} applicants</p>
             </div>
             <p>
-              <button onClick={copyToClipboard}>
+              <button onClick={()=>copyToClipboard(id-1)}>
                 <i class="fa-solid fa-share fa-lg text-red-900"></i>
               </button>
               <p hidden ref={textRef}>
