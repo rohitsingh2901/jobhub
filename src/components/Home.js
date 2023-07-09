@@ -13,7 +13,7 @@ const Home = () => {
     document.title = 'JobHub - Home'
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/jobs');
+        const response = await fetch('https://brassy-well-trick.glitch.me/jobs');
         if (!response.ok) {
           throw new Error('Server error');
         }

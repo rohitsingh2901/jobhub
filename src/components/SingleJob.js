@@ -81,7 +81,7 @@ const SingleJob = (props) => {
     cred.companyName+=name;
 
     
-    fetch('http://localhost:5000/apply', {
+    fetch('https://brassy-well-trick.glitch.me/apply', {
       method: "POST",
       body: JSON.stringify(cred),
       headers: {"Content-type": "application/json"}

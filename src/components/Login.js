@@ -15,7 +15,7 @@ const Login = (props) => {
     const credentials = {
       email,password
     };
-    fetch('http://localhost:5000/verify', {
+    fetch('https://brassy-well-trick.glitch.me/verify', {
       method: "POST",
       body: JSON.stringify(credentials),
       headers: {"Content-type": "application/json"}

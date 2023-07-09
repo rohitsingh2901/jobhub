@@ -17,7 +17,7 @@ const Register = (props) => {
     const credentials = {
       email,password,fname,lname
     };
-    fetch('http://localhost:5000/register', {
+    fetch('https://brassy-well-trick.glitch.me/register', {
       method: "POST",
       body: JSON.stringify(credentials),
       headers: {"Content-type": "application/json"}

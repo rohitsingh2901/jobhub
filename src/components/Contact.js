@@ -18,7 +18,7 @@ const Contact = (props) => {
     const credentials = {
       name,email,message
     };
-    fetch('http://localhost:5000/contactus', {
+    fetch('https://brassy-well-trick.glitch.me/contactus', {
       method: "POST",
       body: JSON.stringify(credentials),
       headers: {"Content-type": "application/json"}
