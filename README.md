@@ -12,24 +12,24 @@ JobHub is a job portal application that allows users to browse and apply for var
 
 ## Dependencies
 
-- "@testing-library/jest-dom": "^5.16.5"
-- "@testing-library/react": "^13.4.0"
-- "@testing-library/user-event": "^13.5.0"
-- "bcryptjs": "^2.4.3"
-- "body-parser": "^1.20.2"
-- "cors": "^2.8.5"
-- "express-fileupload": "^1.4.0"
-- "jquery": "^3.7.0"
-- "mongodb": "3.7"
-- "mongoose": "^7.3.1"
-- "react": "^18.2.0"
-- "react-dom": "^18.2.0"
-- "react-owl-carousel": "^2.3.3"
-- "react-paginate": "^8.2.0"
-- "react-router-dom": "^6.14.1"
-- "react-scripts": "5.0.1"
-- "react-select": "^5.7.3"
-- "web-vitals": "^2.1.4"
+- @testing-library/jest-dom: ^5.16.5
+- @testing-library/react: ^13.4.0
+- @testing-library/user-event: ^13.5.0
+- bcryptjs: ^2.4.3
+- body-parser: ^1.20.2
+- cors: ^2.8.5
+- express-fileupload: ^1.4.0
+- jquery: ^3.7.0
+- mongodb: 3.7
+- mongoose: ^7.3.1
+- react: ^18.2.0
+- react-dom: ^18.2.0
+- react-owl-carousel: ^2.3.3
+- react-paginate: ^8.2.0
+- react-router-dom: ^6.14.1
+- react-scripts: 5.0.1
+- react-select: ^5.7.3
+- web-vitals: ^2.1.4
 
 ## Getting Started
 
