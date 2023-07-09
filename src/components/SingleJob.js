@@ -57,7 +57,8 @@ const SingleJob = (props) => {
   
 
   const copyToClipboard = () => {
-    const text = textRef.current.innerText;
+    const text = textRef.current.innerHTML;
+    console.log(text)
     navigator.clipboard
       .writeText(text)
       .then(() => {
@@ -217,7 +218,7 @@ const SingleJob = (props) => {
                 <i class="fa-solid fa-share fa-lg text-red-900"></i>
               </button>
               <p hidden ref={textRef}>
-                {location.href}
+                {'https://rohitsingh2901.github.io/'+location.pathname}
               </p>
             </p>
           </div>
