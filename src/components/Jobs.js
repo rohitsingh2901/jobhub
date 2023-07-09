@@ -481,7 +481,7 @@ const Jobs = (props) => {
                           height: "60px",
                           marginTop: "5px",
                         }}
-                        src={element.image}
+                        src={'/jobhub'+element.image}
                         alt="Logo"
                       />
                     </div>
@@ -575,7 +575,7 @@ const Jobs = (props) => {
                           height: "60px",
                           marginTop: "5px",
                         }}
-                        src={element.image}
+                        src={'/jobhub'+element.image}
                         alt="Logo"
                       />
                     </div>

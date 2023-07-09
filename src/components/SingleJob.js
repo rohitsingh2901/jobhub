@@ -123,11 +123,11 @@ const SingleJob = (props) => {
 
 
   return (
-    <div style={{"minHeight":"50vw"}}>
+    <div id="SingleJobDiv" style={{"minHeight":"100vh"}}>
     <div className="container my-32">
       <div class="card w-100" id="singlemaincard">
         <div class="card-body">
-          <h5 class="card-title text-center font-extrabold">
+          <h5 class="card-title text-2xl text-center font-extrabold py-6">
             {data[0].jobs.at(id - 1).name} Job in {data[0].jobs.at(id - 1).location}{" "}
             at {data[0].jobs.at(id - 1).company}
           </h5>
@@ -198,7 +198,7 @@ const SingleJob = (props) => {
             >
               <img
                 style={{ width: "60px", height: "60px", marginTop: "5px" }}
-                src={data[0].jobs.at(id - 1).image}
+                src={'/jobhub'+data[0].jobs.at(id - 1).image}
                 alt="Logo"
               />
             </div>
@@ -217,7 +217,7 @@ const SingleJob = (props) => {
                 <i class="fa-solid fa-share fa-lg text-red-900"></i>
               </button>
               <p hidden ref={textRef}>
-                {location.pathname}
+                {location.href}
               </p>
             </p>
           </div>

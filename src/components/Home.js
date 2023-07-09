@@ -212,7 +212,7 @@ const Home = () => {
                       height: "30px",
                       marginTop: "15px",
                     }}
-                    src={Data[0].jobs[0].image}
+                    src={'/jobhub'+Data[0].jobs[0].image}
                     alt="Logo"
                   />
                 </div>
@@ -294,7 +294,7 @@ const Home = () => {
                       height: "30px",
                       marginTop: "15px",
                     }}
-                    src={Data[0].jobs[5].image}
+                    src={'/jobhub'+Data[0].jobs[5].image}
                     alt="Logo"
                   />
                 </div>
@@ -376,7 +376,7 @@ const Home = () => {
                       height: "30px",
                       marginTop: "15px",
                     }}
-                    src={Data[0].jobs[11].image}
+                    src={'/jobhub'+Data[0].jobs[11].image}
                     alt="Logo"
                   />
                 </div>
@@ -458,7 +458,7 @@ const Home = () => {
                       height: "30px",
                       marginTop: "15px",
                     }}
-                    src={Data[0].jobs[19].image}
+                    src={'/jobhub'+Data[0].jobs[19].image}
                     alt="Logo"
                   />
                 </div>
@@ -540,7 +540,7 @@ const Home = () => {
                       height: "30px",
                       marginTop: "15px",
                     }}
-                    src={Data[0].jobs[15].image}
+                    src={'/jobhub'+Data[0].jobs[15].image}
                     alt="Logo"
                   />
                 </div>
@@ -622,7 +622,7 @@ const Home = () => {
                       height: "30px",
                       marginTop: "15px",
                     }}
-                    src={Data[0].jobs[17].image}
+                    src={'/jobhub'+Data[0].jobs[17].image}
                     alt="Logo"
                   />
                 </div>
@@ -704,7 +704,7 @@ const Home = () => {
                       height: "30px",
                       marginTop: "15px",
                     }}
-                    src={Data[0].jobs[7].image}
+                    src={'/jobhub'+Data[0].jobs[7].image}
                     alt="Logo"
                   />
                 </div>
@@ -786,7 +786,7 @@ const Home = () => {
                       height: "30px",
                       marginTop: "15px",
                     }}
-                    src={Data[0].jobs[14].image}
+                    src={'/jobhub'+Data[0].jobs[14].image}
                     alt="Logo"
                   />
                 </div>
@@ -868,7 +868,7 @@ const Home = () => {
                       height: "30px",
                       marginTop: "15px",
                     }}
-                    src={Data[0].jobs[8].image}
+                    src={'/jobhub'+Data[0].jobs[8].image}
                     alt="Logo"
                   />
                 </div>

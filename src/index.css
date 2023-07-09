@@ -525,6 +525,7 @@ input::placeholder {
   min-width:  540px;
   min-height: 300px;
   border: 2px solid rgb(251, 219, 219);
+  background-color: rgb(253, 246, 246);
   border-radius: 20px;
   box-shadow: 10px 10px rgba(255, 0, 0, 0.030);
 }
@@ -878,6 +879,24 @@ form.search::after {
   background-position: center;
   background-size: cover;
   opacity: 0.3;
+  z-index: -1;
+}
+#SingleJobDiv {
+  position: relative;
+}
+
+#SingleJobDiv::before {
+  content: "";
+  position: absolute;
+  top: -12%; 
+  left: -2%; 
+  height: 124%; 
+  width: 104%;
+  background-image: url(https://img.freepik.com/free-vector/light-blue-curve-frame-template_53876-114602.jpg?size=626&ext=jpg&ga=GA1.2.877150888.1686539129&semt=ais);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.2;
   z-index: -1;
 }
 
