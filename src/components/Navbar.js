@@ -10,7 +10,7 @@ const Navbar = () => {
       <nav class="navbar navbar-expand-lg anim" id="navbar">
       <Link class="navbar-brand" to="/jobhub/">
         <div class="enlarge-image">
-          <img style={{"height":"4vw"}} src="/job.png" alt="logo" />
+          <img style={{"height":"4vw"}} src="/jobhub/job.png" alt="logo" />
         </div>
       </Link>
       <button
