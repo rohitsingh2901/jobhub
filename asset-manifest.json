@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/jobhub/static/css/main.629a7e5c.css",
-    "main.js": "/jobhub/static/js/main.6382d197.js",
+    "main.js": "/jobhub/static/js/main.7e898c2f.js",
     "static/js/787.8df1e422.chunk.js": "/jobhub/static/js/787.8df1e422.chunk.js",
     "static/media/rm222batch2-mind-03.jpg": "/jobhub/static/media/rm222batch2-mind-03.b0953525c31fe2901885.jpg",
     "static/media/19276.jpg": "/jobhub/static/media/19276.b592fd034861770531cb.jpg",
     "static/media/62186.jpg": "/jobhub/static/media/62186.ed1392324b77062fc498.jpg",
     "index.html": "/jobhub/index.html",
     "main.629a7e5c.css.map": "/jobhub/static/css/main.629a7e5c.css.map",
-    "main.6382d197.js.map": "/jobhub/static/js/main.6382d197.js.map",
+    "main.7e898c2f.js.map": "/jobhub/static/js/main.7e898c2f.js.map",
     "787.8df1e422.chunk.js.map": "/jobhub/static/js/787.8df1e422.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.629a7e5c.css",
-    "static/js/main.6382d197.js"
+    "static/js/main.7e898c2f.js"
   ]
 }
