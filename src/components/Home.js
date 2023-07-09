@@ -13,7 +13,7 @@ const Home = () => {
     document.title = 'JobHub - Home'
     const fetchUsers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/jobs');
+        const response = await fetch('https://brassy-well-trick.glitch.me/jobs');
         if (!response.ok) {
           throw new Error('Server error');
         }
@@ -197,7 +197,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -207,7 +207,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/jobhub'+Data[0].jobs[0].image}
+                    src={'/'+Data[0].jobs[0].image}
                     alt="Logo"
                   />
                 </div>
@@ -274,7 +274,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -284,7 +284,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/jobhub'+Data[0].jobs[5].image}
+                    src={'/'+Data[0].jobs[5].image}
                     alt="Logo"
                   />
                 </div>
@@ -351,7 +351,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -361,7 +361,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/jobhub'+Data[0].jobs[11].image}
+                    src={'/'+Data[0].jobs[11].image}
                     alt="Logo"
                   />
                 </div>
@@ -428,7 +428,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -438,7 +438,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/jobhub'+Data[0].jobs[19].image}
+                    src={'/'+Data[0].jobs[19].image}
                     alt="Logo"
                   />
                 </div>
@@ -505,7 +505,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -515,7 +515,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/jobhub'+Data[0].jobs[15].image}
+                    src={'/'+Data[0].jobs[15].image}
                     alt="Logo"
                   />
                 </div>
@@ -582,7 +582,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -592,7 +592,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/jobhub'+Data[0].jobs[17].image}
+                    src={'/'+Data[0].jobs[17].image}
                     alt="Logo"
                   />
                 </div>
@@ -659,7 +659,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -669,7 +669,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/jobhub'+Data[0].jobs[7].image}
+                    src={'/'+Data[0].jobs[7].image}
                     alt="Logo"
                   />
                 </div>
@@ -736,7 +736,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -746,7 +746,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/jobhub'+Data[0].jobs[14].image}
+                    src={'/'+Data[0].jobs[14].image}
                     alt="Logo"
                   />
                 </div>
@@ -813,7 +813,7 @@ const Home = () => {
                       </small>
                     </div>
                     <div className="flex justify-between">
-                      <Link to={`/jobhub/jobs/${Data[0].jobs[0].id}`}>
+                      <Link to={`/jobs/${Data[0].jobs[0].id}`}>
                         <button className=" homeViewbtn text-xs">
                           Apply Now
                         </button>
@@ -823,7 +823,7 @@ const Home = () => {
                 </div>
                 <div id="cardLogo"  class="col-md-2">
                   <img
-                    src={'/jobhub'+Data[0].jobs[8].image}
+                    src={'/'+Data[0].jobs[8].image}
                     alt="Logo"
                   />
                 </div>

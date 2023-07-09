@@ -24,11 +24,11 @@ const Footer = () => {
 
         <div class="row">
           <ul id='footerUL'>
-            <li><Link to="/jobhub/contact">Contact us</Link></li>
-            <li><Link to="/jobhub/services">Our Services</Link></li>
-            <li><Link to="/jobhub/">Our Courses</Link></li>
-            <li><Link to="/jobhub/jobs">Internships & Jobs</Link></li>
-            <li><Link to="/jobhub/">Career</Link></li>
+            <li><Link to="/contact">Contact us</Link></li>
+            <li><Link to="/services">Our Services</Link></li>
+            <li><Link to="/">Our Courses</Link></li>
+            <li><Link to="/jobs">Internships & Jobs</Link></li>
+            <li><Link to="/">Career</Link></li>
           </ul>
         </div>
 

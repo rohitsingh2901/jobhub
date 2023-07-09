@@ -1,16 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
 const Navbar = () => {
- 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 1000px)');
+
+    const handleResize = (mq) => {
+      setIsMobile(mq.matches);
+    };
+
+    handleResize(mediaQuery);
+
+    mediaQuery.addEventListener('change', handleResize);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleResize);
+    };
+  }, []);
+
+  const tagClasses = isMobile ? 'nav-link text-light font-weight-bolder data-toggle="collapse" data-target="#navbarNav"' : 'nav-link text-light font-weight-bolder';
 
   return (
     <>
       <nav class="navbar navbar-expand-lg anim" id="navbar">
-      <Link class="navbar-brand" to="/jobhub/">
+      <Link class="navbar-brand" to="/">
         <div class="enlarge-image">
-          <img  src="/jobhub/job.png" alt="logo" />
+          <img  src="/job.png" alt="logo" />
         </div>
       </Link>
       <button
@@ -18,7 +36,7 @@ const Navbar = () => {
         class="navbar-toggler"
         type="button"
         data-toggle="collapse"
-        data-target="#navbarNav"
+        data-target="#navbarNav"      
         aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -27,54 +45,49 @@ const Navbar = () => {
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item" data-toggle="collapse"
-        data-target="#navbarNav">
+          <li class="nav-item" >
             <Link
-              class="nav-link text-light font-weight-bolder"
+              class={tagClasses}
               onclick="myFunction(this)"
-              to="/jobhub/"
+              to="/"
               >Home</Link
               
             >
           </li>
-          <li class="nav-item" data-toggle="collapse"
-        data-target="#navbarNav">
+          <li class="nav-item" >
             <Link
-              to="/jobhub/jobs"
-              class="nav-link text-light font-weight-bolder"
+              to="/jobs"
+              class={tagClasses}
               onclick="myFunction(this)"
               >Jobs</Link
             >
           </li>
-          <li class="nav-item" data-toggle="collapse"
-        data-target="#navbarNav">
-            <Link to="/jobhub/services"
-              class="nav-link text-light font-weight-bolder"
+          <li class="nav-item" >
+            <Link to="/services"
+              class={tagClasses}
               onclick="myFunction(this)"
               >Services</Link
             >
           </li>
-          <li class="nav-item" data-toggle="collapse"
-        data-target="#navbarNav">
+          <li class="nav-item" >
             <Link
-              class="nav-link text-light font-weight-bolder"
+              class={tagClasses}
               onclick="myFunction(this)"
-              to="/jobhub/about"
+              to="/about"
               >About</Link
             >
           </li>
-          <li class="nav-item" data-toggle="collapse"
-        data-target="#navbarNav">
-            <Link to="/jobhub/contact"
-              class="nav-link text-light font-weight-bolder"
+          <li class="nav-item" >
+            <Link to="/contact"
+              class={tagClasses}
               onclick="myFunction(this)"
               
               >Contact Us</Link
             >
           </li>
           <li id='navBtnLi'>
-            <Link to="/jobhub/login"><button className='btn  navbtn mx-2'>Login</button></Link>
-            <Link to="/jobhub/register"><button className='btn  navbtn'>Register</button></Link>
+            <Link to="/login"><button className='btn  navbtn mx-2'>Login</button></Link>
+            <Link to="/register"><button className='btn  navbtn'>Register</button></Link>
           </li>
         </ul>
       </div>

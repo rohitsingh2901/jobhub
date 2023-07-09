@@ -33,28 +33,28 @@ function App() {
       <Navbar/>
       <Alert alert={{msg,typ,alert}}/>
       <Routes>
-          <Route  exact path="/jobhub/login" element={<Login alert={{msg,typ,alert}}/>}/>
+          <Route  exact path="/login" element={<Login alert={{msg,typ,alert}}/>}/>
       </Routes>
       <Routes>
-          <Route  exact path="/jobhub/register" element={<Register alert={{msg,typ,alert}}/>}/>
+          <Route  exact path="/register" element={<Register alert={{msg,typ,alert}}/>}/>
       </Routes>
       <Routes>
-          <Route  exact path="/jobhub/contact" element={<Contact alert={{msg,typ,alert}}/>}/>
+          <Route  exact path="/contact" element={<Contact alert={{msg,typ,alert}}/>}/>
       </Routes>
       <Routes>
-          <Route  exact path="/jobhub/jobs" element={<Jobs alert={{msg,typ,alert}} />}/>
+          <Route  exact path="/jobs" element={<Jobs alert={{msg,typ,alert}} />}/>
       </Routes>
       <Routes>
-          <Route  exact path="/jobhub/jobs/:id" element={<SingleJob alert={{msg,typ,alert}} />}/>
+          <Route  exact path="/jobs/:id" element={<SingleJob alert={{msg,typ,alert}} />}/>
       </Routes>
       <Routes>
-          <Route exact  path="/jobhub/services" Component={Services}/>
+          <Route exact  path="/services" Component={Services}/>
       </Routes>
       <Routes>
-          <Route exact  path="/jobhub/about" Component={About}/>
+          <Route exact  path="/about" Component={About}/>
       </Routes>
       <Routes>
-          <Route exact  path="/jobhub/" Component={Home}/>
+          <Route exact  path="/" Component={Home}/>
       </Routes>
 
 

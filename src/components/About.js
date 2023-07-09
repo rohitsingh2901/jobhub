@@ -232,21 +232,21 @@ const About = () => {
         >
           <img className="teamIMG" alt="team" src="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=826&t=st=1688763403~exp=1688764003~hmac=aaf85fe88a9cb7144b64c8c3750fc9b80e3d598a5ff89805223b2d75e73af027"></img>
 
-          <img className="teamIMG" alt="team" src="/jobhub/Team photos/1businessman-character-avatar-isolated_24877-60111-removebg-preview (1).png"></img>
+          <img className="teamIMG" alt="team" src="/Team photos/1businessman-character-avatar-isolated_24877-60111-removebg-preview (1).png"></img>
 
-          <img className="teamIMG" alt="team" src="/jobhub/Team photos/2businessman-character-avatar-isolated_24877-60111-removebg-preview.png"></img>
+          <img className="teamIMG" alt="team" src="/Team photos/2businessman-character-avatar-isolated_24877-60111-removebg-preview.png"></img>
 
-          <img className="teamIMG" alt="team" src="/jobhub/Team photos/3businessman-character-avatar-isolated_24877-60111-removebg-preview (7).png"></img>
+          <img className="teamIMG" alt="team" src="/Team photos/3businessman-character-avatar-isolated_24877-60111-removebg-preview (7).png"></img>
 
-          <img className="teamIMG" alt="team" src="/jobhub/Team photos/4businessman-character-avatar-isolated_24877-60111-removebg-preview (6).png"></img>
+          <img className="teamIMG" alt="team" src="/Team photos/4businessman-character-avatar-isolated_24877-60111-removebg-preview (6).png"></img>
 
-          <img className="teamIMG" alt="team" src="/jobhub/Team photos/5businessman-character-avatar-isolated_24877-60111-removebg-preview (5).png"></img>
+          <img className="teamIMG" alt="team" src="/Team photos/5businessman-character-avatar-isolated_24877-60111-removebg-preview (5).png"></img>
 
-          <img className="teamIMG" alt="team" src="/jobhub/Team photos/6businessman-character-avatar-isolated_24877-60111-removebg-preview (4).png"></img>
+          <img className="teamIMG" alt="team" src="/Team photos/6businessman-character-avatar-isolated_24877-60111-removebg-preview (4).png"></img>
 
-          <img className="teamIMG" alt="team" src="/jobhub/Team photos/7businessman-character-avatar-isolated_24877-60111-removebg-preview (3).png"></img>
+          <img className="teamIMG" alt="team" src="/Team photos/7businessman-character-avatar-isolated_24877-60111-removebg-preview (3).png"></img>
 
-          <img className="teamIMG" alt="team" src="/jobhub/Team photos/8businessman-character-avatar-isolated_24877-60111-removebg-preview (2).png"></img>
+          <img className="teamIMG" alt="team" src="/Team photos/8businessman-character-avatar-isolated_24877-60111-removebg-preview (2).png"></img>
 
 
         </OwlCarousel>
