@@ -63,7 +63,7 @@ A live demo of the JobHub application can be found at [JobHub Demo](https://rohi
 ![JobHub - Jobs - Google Chrome 10-07-2023 02_33_21](https://github.com/rohitsingh2901/jobhub/assets/80673974/ac45079d-3429-4a3b-82c9-c850f4d76c9e)
 
 
-## Company XYZ
+## Project Assignment
 
 This project was developed as an assignment for Subhajit Chakraborty.
 
