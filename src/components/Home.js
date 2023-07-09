@@ -3,6 +3,7 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.min.css";
 import "owl.carousel/dist/assets/owl.theme.default.min.css";
 import { Link } from "react-router-dom";
+import IncrementingNumber from "./IncrementingNumber";
 
 const Home = () => {
   const [Data, setUsers] = useState([]);
@@ -113,19 +114,19 @@ const Home = () => {
 
         <div className="flex justify-center mt-32 mb-48 text-center">
           <div className="col-3 left">
-            <h1 className="font-black text-5xl text-red-700">300K+ </h1>
+            <h1 className="font-black text-5xl text-red-700"><IncrementingNumber number={300} speed={5}/>K+ </h1>
             <p className="font-medium text-gray-700">companies hiring</p>
           </div>
           <div className="col-3 left">
-            <h1 className="font-black text-5xl text-red-700">10K+ </h1>
+            <h1 className="font-black text-5xl text-red-700"><IncrementingNumber number={10} speed={170}/>K+ </h1>
             <p className="font-medium text-gray-700">new openings everyday</p>
           </div>
           <div className="col-3 right">
-            <h1 className="font-black text-5xl text-red-700">21M+</h1>
+            <h1 className="font-black text-5xl text-red-700"><IncrementingNumber number={21} speed={80}/>M+</h1>
             <p className="font-medium text-gray-700">active students</p>
           </div>
           <div className="col-3 right">
-            <h1 className="font-black text-5xl text-red-700">600K+ </h1>
+            <h1 className="font-black text-5xl text-red-700"><IncrementingNumber number={600} speed={2}/>K+ </h1>
             <p className="font-medium text-gray-700">learners</p>
           </div>
         </div>
