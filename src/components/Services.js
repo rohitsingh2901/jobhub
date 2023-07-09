@@ -8,7 +8,7 @@ const Services = () => {
     document.title = 'JobHub - Services'
   }, [])
   return (
-    <div id="servicesDiv" style={{"minHeight":"50vw"}}>
+    <div id="servicesDiv">
     <div  className=" container pt-12">
       <h1 className="text-center font-black text-6xl">Our Services</h1>
       <hr class="my-12" />

@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
 
         <div class="row">
-          <ul>
+          <ul id='footerUL'>
             <li><Link to="/jobhub/contact">Contact us</Link></li>
             <li><Link to="/jobhub/services">Our Services</Link></li>
             <li><Link to="/jobhub/">Our Courses</Link></li>
@@ -32,8 +32,9 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div class="row">
-          JobHub Copyright © 2023 JobHub - All rights reserved || Completely Designed By:
+        <div id='footerCredit' class="row">
+          <p>JobHub Copyright © 2023 JobHub - All rights reserved</p>
+          <p>&nbsp; Completely Designed By:</p>
           <Link to="https://github.com/rohitsingh2901"> &nbsp;&nbsp;Rohit Singh</Link>
         </div>
       </div>

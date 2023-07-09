@@ -13,7 +13,7 @@ const Home = () => {
     document.title = 'JobHub - Home'
     const fetchUsers = async () => {
       try {
-        const response = await fetch('https://brassy-well-trick.glitch.me/jobs');
+        const response = await fetch('http://localhost:5000/jobs');
         if (!response.ok) {
           throw new Error('Server error');
         }
@@ -112,7 +112,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex justify-center mt-32 mb-48 text-center">
+        <div id="incNum" className="flex justify-center mt-32 mb-48 text-center">
           <div className="col-3 left">
             <h1 className="font-black text-5xl text-red-700"><IncrementingNumber number={300} speed={5}/>K+ </h1>
             <p className="font-medium text-gray-700">companies hiring</p>
@@ -131,7 +131,7 @@ const Home = () => {
           </div>
         </div>
 
-        <h1 className="text-center mt-48 font-extrabold right">
+        <h1 id="latestJob" className="text-center mt-48 font-extrabold right">
           Latest <span className="text-blue-700">Jobs</span> on{" "}
           <span className="text-red-600">JobHub</span>
         </h1>
@@ -143,7 +143,7 @@ const Home = () => {
               id="mainCard"
               style={{ minWidth: "270px", minHeight: "250px"}}
             >
-              <div class="row no-gutters">
+              <div  class="flex no-gutters cardcol">
                 <div class="col-md-10">
                   <div class="card-body">
                     <h6 class="card-title font-medium text-xs">
@@ -205,13 +205,8 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div id="cardLogo"  class="col-md-2">
                   <img
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      marginTop: "15px",
-                    }}
                     src={'/jobhub'+Data[0].jobs[0].image}
                     alt="Logo"
                   />
@@ -225,7 +220,7 @@ const Home = () => {
               id="mainCard"
               style={{ minWidth: "270px", minHeight: "250px" }}
             >
-              <div class="row no-gutters">
+              <div  class="flex no-gutters cardcol">
                 <div class="col-md-10">
                   <div class="card-body">
                     <h6 class="card-title font-medium text-xs">
@@ -287,13 +282,8 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div id="cardLogo"  class="col-md-2">
                   <img
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      marginTop: "15px",
-                    }}
                     src={'/jobhub'+Data[0].jobs[5].image}
                     alt="Logo"
                   />
@@ -307,7 +297,7 @@ const Home = () => {
               id="mainCard"
               style={{ minWidth: "270px", minHeight: "250px" }}
             >
-              <div class="row no-gutters">
+              <div  class="flex no-gutters cardcol">
                 <div class="col-md-10">
                   <div class="card-body">
                     <h6 class="card-title font-medium text-xs">
@@ -369,13 +359,8 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div id="cardLogo"  class="col-md-2">
                   <img
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      marginTop: "15px",
-                    }}
                     src={'/jobhub'+Data[0].jobs[11].image}
                     alt="Logo"
                   />
@@ -389,7 +374,7 @@ const Home = () => {
               id="mainCard"
               style={{ minWidth: "270px", minHeight: "250px" }}
             >
-              <div class="row no-gutters">
+              <div  class="flex no-gutters cardcol">
                 <div class="col-md-10">
                   <div class="card-body">
                     <h6 class="card-title font-medium text-xs">
@@ -451,13 +436,8 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div id="cardLogo"  class="col-md-2">
                   <img
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      marginTop: "15px",
-                    }}
                     src={'/jobhub'+Data[0].jobs[19].image}
                     alt="Logo"
                   />
@@ -471,7 +451,7 @@ const Home = () => {
               id="mainCard"
               style={{ minWidth: "270px", minHeight: "250px" }}
             >
-              <div class="row no-gutters">
+              <div  class="flex no-gutters cardcol">
                 <div class="col-md-10">
                   <div class="card-body">
                     <h6 class="card-title font-medium text-xs">
@@ -533,13 +513,8 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div id="cardLogo"  class="col-md-2">
                   <img
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      marginTop: "15px",
-                    }}
                     src={'/jobhub'+Data[0].jobs[15].image}
                     alt="Logo"
                   />
@@ -553,7 +528,7 @@ const Home = () => {
               id="mainCard"
               style={{ minWidth: "270px", minHeight: "250px" }}
             >
-              <div class="row no-gutters">
+              <div  class="flex no-gutters cardcol">
                 <div class="col-md-10">
                   <div class="card-body">
                     <h6 class="card-title font-medium text-xs">
@@ -615,13 +590,8 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div id="cardLogo"  class="col-md-2">
                   <img
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      marginTop: "15px",
-                    }}
                     src={'/jobhub'+Data[0].jobs[17].image}
                     alt="Logo"
                   />
@@ -635,7 +605,7 @@ const Home = () => {
               id="mainCard"
               style={{ minWidth: "270px", minHeight: "250px" }}
             >
-              <div class="row no-gutters">
+              <div  class="flex no-gutters cardcol">
                 <div class="col-md-10">
                   <div class="card-body">
                     <h6 class="card-title font-medium text-xs">
@@ -697,13 +667,8 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div id="cardLogo"  class="col-md-2">
                   <img
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      marginTop: "15px",
-                    }}
                     src={'/jobhub'+Data[0].jobs[7].image}
                     alt="Logo"
                   />
@@ -717,7 +682,7 @@ const Home = () => {
               id="mainCard"
               style={{ minWidth: "270px", minHeight: "250px" }}
             >
-              <div class="row no-gutters">
+              <div  class="flex no-gutters cardcol">
                 <div class="col-md-10">
                   <div class="card-body">
                     <h6 class="card-title font-medium text-xs">
@@ -779,13 +744,8 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div id="cardLogo"  class="col-md-2">
                   <img
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      marginTop: "15px",
-                    }}
                     src={'/jobhub'+Data[0].jobs[14].image}
                     alt="Logo"
                   />
@@ -799,7 +759,7 @@ const Home = () => {
               id="mainCard"
               style={{ minWidth: "270px", minHeight: "250px" }}
             >
-              <div class="row no-gutters">
+              <div  class="flex no-gutters cardcol">
                 <div class="col-md-10">
                   <div class="card-body">
                     <h6 class="card-title font-medium text-xs">
@@ -861,13 +821,8 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-                <div class="col-md-2">
+                <div id="cardLogo"  class="col-md-2">
                   <img
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      marginTop: "15px",
-                    }}
                     src={'/jobhub'+Data[0].jobs[8].image}
                     alt="Logo"
                   />
@@ -880,11 +835,11 @@ const Home = () => {
 
         
 
-        <h1 className="text-center mt-48 font-extrabold right">
+        <h1 id="companyH1" className="text-center mt-48 font-extrabold right">
           Top <span className="text-blue-700">Companies</span> trust{" "}
           <span className="text-red-600">JobHub</span>
         </h1>
-        <OwlCarousel className="flex owl-carousel owl-theme mt-16 mb-12" {...options2}>
+        <OwlCarousel className="flex owl-carousel owl-theme mt-16 pb-24" {...options2}>
           <div className="Hitem">
             <img
               className="HomeCompanyIMG"

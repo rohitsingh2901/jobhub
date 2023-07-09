@@ -338,7 +338,7 @@ const Jobs = (props) => {
 
   return (
     <div id="jobsDiv" style={{"minHeight":"50vw"}}>
-    <div className="flex justify-center">
+    <div id="mainJobDir" className="flex justify-center">
       <div className="col-2 flex justify-center items-start mt-24">
         <div className="">
           <h5 className="text-center font-bold">Filter</h5>

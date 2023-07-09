@@ -196,15 +196,15 @@ const About = () => {
           </div>
         </OwlCarousel>
 
-          <div className="flex-col my-64">
+          <div id="aboutHeadingsHead" className="flex-col my-64">
             
-            <h1 className="text-left font-black my-12 text-5xl "><span className="text-red-600">300M+</span> Unique monthly <span className="text-blue-600" >visitors</span></h1>
-            
-            
-            <h1 className="text-center font-black my-12 text-5xl "><span className="text-red-600">245M+</span> Total resumes on <span className="text-blue-600">JobHub</span></h1>
+            <h1 className="text-left font-black my-12 text-5xl aboutHeadings"><span className="text-red-600">300M+</span> Unique monthly <span className="text-blue-600" >visitors</span></h1>
             
             
-            <h1 className="text-right font-black my-12 text-5xl "><span className="text-red-600">850M+</span> Total ratings and <span className="text-blue-600">reviews</span></h1>
+            <h1 className="text-center font-black my-12 text-5xl aboutHeadings"><span className="text-red-600">245M+</span> Total resumes on <span className="text-blue-600">JobHub</span></h1>
+            
+            
+            <h1 className="text-right font-black my-12 text-5xl aboutHeadings"><span className="text-red-600">850M+</span> Total ratings and <span className="text-blue-600">reviews</span></h1>
             
           </div>
 

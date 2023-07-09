@@ -80,10 +80,12 @@ code {
 }
 
 .enlarge-image img {
+  height: 4vw;
   transition: transform 0.3s ease;
 }
 
 .enlarge-image:hover img {
+  height: 4vw;
   transform: scale(1.1);
 }
 
@@ -636,7 +638,6 @@ form.search::after {
   position: relative;
   height: 100vh;
   width: 100vw;
-  
 }
 
 #servicesDiv::before {
@@ -923,3 +924,188 @@ form.search::after {
 
 
 
+@media only screen and (max-width: 1000px) {
+  #navToggleBtn{
+    width: 50px;
+    background-color: rgb(231, 231, 52);
+    padding-bottom: 2px;
+  }
+  .enlarge-image {
+    padding-top: 10px;
+  margin-left: 2vw;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .enlarge-image img {
+  height: 60px;
+    transition: transform 0.3s ease;
+  }
+  
+  .enlarge-image:hover img {
+  height: 60px;
+    transform: scale(1.1);
+  }
+  #navBtnLi{
+    padding: 15px 0px;
+    padding-left: 0px;
+  }
+  .navbar-nav li{
+    padding-left: 10px;
+  }
+  #incNum{
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vw;
+    margin-bottom: 0vw;
+  }
+  #latestJob{
+    margin-top: 20vw;
+  }
+  #companyH1{
+    margin-top: 20vw;
+  }
+  #cardLogo img{
+    width: 30px;
+    height : 30px;
+    margin-right: 15px;
+  }
+  #cardLogo {
+    display: flex;
+    justify-content: end;
+  }
+  .cardcol{
+    flex-direction: column-reverse;
+  }
+  #footerUL{
+    justify-content: space-around;
+  }
+  #footerUL li{
+    font-size: xx-small;
+  }
+  #footerCredit{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #mainJobDir{
+    flex-direction: column;
+    align-items: center;
+  }
+  #servicesDiv {
+    position: relative;
+    height: auto;
+    width: auto;
+  }
+  #servicesDiv div{
+    padding: 0px 30px;
+  }
+  
+  #servicesDiv::before {
+    content: "";
+    position: absolute;
+    top: -2%; 
+    left: -2%; 
+    height: 104%; 
+    width: 104%;
+    background-image: url(/public/Bg\ Images/19276.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.08;
+    z-index: -1;
+  }
+  .teamIMG{
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 2px 3px 10px 2px rgba(115, 83, 245, 0.433);   
+
+  }
+  .owlCard{
+    height: 250px;
+    border: 2px solid rgb(251, 219, 219);
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(255, 0, 0, 0.030);
+    box-shadow: 3px 3px 3px rgba(245, 83, 83, 0.208);
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+  }
+  #containerlogin h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+  }
+  #containerlogin h4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #containerRegister h1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+  }
+  #containerRegister h4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #singlemaincard{
+    min-width:  80vw;
+    min-height: 80vw;
+    border: 2px solid rgb(251, 219, 219);
+    background-color: rgb(253, 246, 246);
+    border-radius: 20px;
+    box-shadow: 10px 10px rgba(255, 0, 0, 0.030);
+  }
+
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 640px) {
+  .aboutHeadings{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  #aboutHeadingsHead{
+    padding-top: 0vw;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  #id1234{
+    flex-direction: column;
+  }
+  
+}
+@media only screen and (max-width: 850px) {
+  #map{
+    width: 80vw;
+    height: 80vw;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(245, 83, 83, 0.247);
+  }
+  
+}
+
+
+
+#cardLogo img{
+  width: 30px;
+  height : 30px;
+  margin-top: 15px;
+}
