@@ -714,6 +714,10 @@ form.search::after {
   cursor: pointer;
   color: #ffffff;
 }
+.footer .row a i:hover {
+  cursor: pointer;
+  color: #ffffff;
+}
 
 .footer .row ul {
   display: flex;
