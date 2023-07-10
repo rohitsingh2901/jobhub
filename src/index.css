@@ -1065,6 +1065,11 @@ form.search::after {
     border-radius: 20px;
     box-shadow: 10px 10px rgba(255, 0, 0, 0.030);
   }
+  .owl-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 }
 

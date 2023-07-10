@@ -21,7 +21,7 @@ const Navbar = () => {
     };
   }, []);
 
-  const tagClasses = isMobile ? 'nav-link text-light font-weight-bolder data-toggle="collapse" data-target="#navbarNav"' : 'nav-link text-light font-weight-bolder';
+  const tagClasses = isMobile ? `nav-link text-light font-weight-bolder data-toggle="collapse" data-target="#navbarNav"` : `nav-link text-light font-weight-bolder`; 
 
   return (
     <>

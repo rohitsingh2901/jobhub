@@ -256,6 +256,7 @@ const Jobs = (props) => {
       setCheckCheck(false);
       setlen(data[0].jobs.length);
       setCurrentPage(currentPage);
+      console.log(1)
     } else if(((inputchecked !== text0) ||
     (inputchecked1 !== text00) ||
     (inputchecked2 !== text000) ||
@@ -267,7 +268,12 @@ const Jobs = (props) => {
       );
       setlen(combinedResult.length);
       setfilter(renderData2);
+      console.log(2)
       setCurrentPage(currentPage);
+      
+      const l = document.getElementsByClassName('pagination__page')[0].firstElementChild
+      l.click()
+    
     }
     else if(len<=5){
       setCheckCheck(true);
@@ -277,6 +283,7 @@ const Jobs = (props) => {
       );
       setlen(combinedResult.length);
       setfilter(renderData2);
+      console.log(3)
       setCurrentPage(0)
     }
     else{
@@ -287,9 +294,11 @@ const Jobs = (props) => {
       );
       setlen(combinedResult.length);
       setfilter(renderData2);
+      console.log(4)
       setCurrentPage(currentPage)
     }
-  }, [inputchecked, currentPage, inputchecked1, inputchecked2,inputchecked3]);
+
+  }, [inputchecked,inputchecked1, inputchecked2,inputchecked3]);
 
 
 

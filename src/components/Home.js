@@ -62,16 +62,16 @@ const Home = () => {
     margin: 10,
     responsive: {
       0: {
-        items: 2,
+        items: 1,
       },
       768: {
-        items: 3,
+        items: 2,
       },
       1000: {
-        items: 4,
+        items: 3,
       },
       1400: {
-        items: 5,
+        items: 4,
       },
     },
   };
