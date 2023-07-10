@@ -420,7 +420,7 @@ const Jobs = (props) => {
                           <i class="fa-sharp fa-solid fa-location-dot mr-2 fa"></i>
                           <span>{element.location}</span>
                         </div>
-                        <div className="flex items-center justify-between my-2">
+                        <div id="sdCtcExp" className="flex items-center justify-between my-2">
                           <div className="flex flex-col items-start justify-start">
                             <span>
                               <i class="far fa-play-circle fa mr-2"></i>
