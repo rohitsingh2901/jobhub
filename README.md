@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# JobHub
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+JobHub is a job portal application that allows users to browse and apply for various job positions. It is built using HTML, CSS, JavaScript, React, Express, MongoDB, and Glitch.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Login page: Users can log in with their credentials, which are verified using MongoDB.
+- Browse Jobs: Users can explore job options such as software developer, data scientist, etc. Each job has a single view option.
+- Apply for Jobs: Users can apply for specific job positions, and the application data is stored in MongoDB.
+- Application Form: When users press the apply button, an application form opens, where they can fill in their details. The form data is stored in JSON format in MongoDB.
+- Signup Page: Users can create an account by signing up, and their credentials are saved in MongoDB with password hashing.
 
-### `npm start`
+## Dependencies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- @testing-library/jest-dom: ^5.16.5
+- @testing-library/react: ^13.4.0
+- @testing-library/user-event: ^13.5.0
+- bcryptjs: ^2.4.3
+- body-parser: ^1.20.2
+- cors: ^2.8.5
+- jquery: ^3.7.0
+- mongodb: 3.7
+- mongoose: ^7.3.1
+- react: ^18.2.0
+- react-dom: ^18.2.0
+- react-owl-carousel: ^2.3.3
+- react-paginate: ^8.2.0
+- react-router-dom: ^6.14.1
+- react-scripts: 5.0.1
+- react-select: ^5.7.3
+- web-vitals: ^2.1.4
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+1. Clone the repository: `git clone [repository-url]`
+2. Navigate to the project directory: `cd JobHub`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Change all fetch API URL links to `http://localhost:3000:5000`
+6. Open your browser and visit: `http://localhost:3000`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo
 
-### `npm run build`
+A live demo of the JobHub application can be found at [JobHub Demo](https://rohitsingh2901.github.io/jobhub/#/).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Screenshots
+![JobHub - Home - Google Chrome 10-07-2023 02_30_27](https://github.com/rohitsingh2901/jobhub/assets/80673974/7e121d02-8640-44d9-bcbf-b733e01a5809)
+![JobHub - Home - Google Chrome 10-07-2023 02_30_38](https://github.com/rohitsingh2901/jobhub/assets/80673974/0af07baf-9f36-4069-8d07-93dcf860023f)
+![JobHub - Home - Google Chrome 10-07-2023 02_30_42](https://github.com/rohitsingh2901/jobhub/assets/80673974/184fde09-bf23-4762-bbf8-4ff62faa562f)
+![JobHub - Home - Google Chrome 10-07-2023 02_31_02](https://github.com/rohitsingh2901/jobhub/assets/80673974/c381fcc3-a393-4c18-b02f-afe70f83abae)
+![JobHub - Home - Google Chrome 10-07-2023 02_31_09](https://github.com/rohitsingh2901/jobhub/assets/80673974/2bdcf360-d9f0-4158-82b7-fc10a5bdc0d7)
+![JobHub - Jobs - Google Chrome 10-07-2023 02_31_27](https://github.com/rohitsingh2901/jobhub/assets/80673974/c9916232-ddee-4d58-9504-64ed10cafd12)
+![JobHub - Jobs - Google Chrome 10-07-2023 02_31_58](https://github.com/rohitsingh2901/jobhub/assets/80673974/9331b400-62cd-4191-a394-e4f6a46f0e56)
+![JobHub - Jobs - Google Chrome 10-07-2023 02_32_13](https://github.com/rohitsingh2901/jobhub/assets/80673974/9ace31cf-0525-4fa3-bb2b-670d1466f8bb)
+![JobHub - Jobs - Google Chrome 10-07-2023 02_32_18](https://github.com/rohitsingh2901/jobhub/assets/80673974/2b5f42ed-12b4-4991-85b4-83596a32c5b7)
+![JobHub - Jobs - Google Chrome 10-07-2023 02_32_31](https://github.com/rohitsingh2901/jobhub/assets/80673974/04cb312d-c6be-4bf4-a189-f099716203fb)
+![JobHub - Jobs - Google Chrome 10-07-2023 02_32_42](https://github.com/rohitsingh2901/jobhub/assets/80673974/0a2aa598-d358-4916-aae7-86fe16da7868)
+![JobHub - Jobs - Google Chrome 10-07-2023 02_32_51](https://github.com/rohitsingh2901/jobhub/assets/80673974/ea772a19-a2b8-4044-8ca2-96c95f105b40)
+![JobHub - Jobs - Google Chrome 10-07-2023 02_32_57](https://github.com/rohitsingh2901/jobhub/assets/80673974/8921555a-045e-431a-ad84-68be3a5a00eb)
+![JobHub - Jobs - Google Chrome 10-07-2023 02_33_07](https://github.com/rohitsingh2901/jobhub/assets/80673974/07b8755d-b5d3-4df8-a2b8-1fc6256df228)
+![JobHub - Jobs - Google Chrome 10-07-2023 02_33_17](https://github.com/rohitsingh2901/jobhub/assets/80673974/06132744-958b-4735-8e4c-a6ae3d26973f)
+![JobHub - Jobs - Google Chrome 10-07-2023 02_33_21](https://github.com/rohitsingh2901/jobhub/assets/80673974/ac45079d-3429-4a3b-82c9-c850f4d76c9e)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Assignment
 
-### `npm run eject`
+This project was developed as an assignment for Subhajit Chakraborty.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Author
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Rohit Singh](https://github.com/rohitsingh2901)
